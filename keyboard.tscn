@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://bm4iou4241gt4"]
+
+[ext_resource type="Script" uid="uid://c24mxetwmfnoc" path="res://keyboard.gd" id="1_yo7bg"]
+[ext_resource type="PackedScene" uid="uid://m78r2dh0n8ax" path="res://full_consonants.tscn" id="3_d8yjl"]
+[ext_resource type="PackedScene" uid="uid://bdvb205ws0ic1" path="res://full_vowels.tscn" id="3_rpc6l"]
+
+[node name="Keyboard" type="Control" unique_id=1540252945]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_yo7bg")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1426383396]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HSplitContainer" parent="VBoxContainer" unique_id=109883805]
+layout_mode = 2
+collapsed = true
+dragger_visibility = 1
+
+[node name="FullConsonants" parent="VBoxContainer/HBoxContainer" unique_id=2053068840 instance=ExtResource("3_d8yjl")]
+layout_mode = 2
+size_flags_stretch_ratio = 2.0
+
+[node name="FullVowels" parent="VBoxContainer/HBoxContainer" unique_id=1166248587 instance=ExtResource("3_rpc6l")]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer" unique_id=1222996909]
+layout_mode = 2
+
+[node name="Copy" type="Button" parent="VBoxContainer/HBoxContainer2" unique_id=257782652]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "COPY"
+
+[node name="Clear" type="Button" parent="VBoxContainer/HBoxContainer2" unique_id=479800317]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "CLEAR"
+
+[node name="Backspace" type="Button" parent="VBoxContainer/HBoxContainer2" unique_id=1630093481]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "<-"
+
+[connection signal="typed" from="VBoxContainer/HBoxContainer/FullConsonants" to="." method="_on_typed"]
+[connection signal="typed" from="VBoxContainer/HBoxContainer/FullVowels" to="." method="_on_typed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer2/Copy" to="." method="_on_copy_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer2/Clear" to="." method="_on_clear_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer2/Backspace" to="." method="_on_backspace_pressed"]

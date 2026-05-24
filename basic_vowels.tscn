@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://b0ji8qgfcamc0"]
+
+[ext_resource type="Script" uid="uid://bv2twq1gfp5bu" path="res://basic_vowels.gd" id="1_gk8br"]
+
+[node name="BasicVowels" type="GridContainer" unique_id=1474821788]
+size_flags_horizontal = 3
+script = ExtResource("1_gk8br")

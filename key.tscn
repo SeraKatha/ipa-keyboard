@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://efvn2xxhdkox"]
+
+[node name="Key" type="Button" unique_id=633097217]
+size_flags_horizontal = 3
+size_flags_vertical = 0
+focus_mode = 0
+action_mode = 0

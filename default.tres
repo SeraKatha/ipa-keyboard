@@ -1,0 +1,7 @@
+[gd_resource type="Theme" format=3 uid="uid://cns6dfpuu684e"]
+
+[ext_resource type="FontFile" uid="uid://dc6nssxep0c3i" path="res://fonts/NotoSans-SemiBold.ttf" id="1_nixot"]
+
+[resource]
+default_font = ExtResource("1_nixot")
+default_font_size = 16
