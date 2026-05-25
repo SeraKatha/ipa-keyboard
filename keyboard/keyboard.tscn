@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://bm4iou4241gt4"]
 
-[ext_resource type="Script" uid="uid://c24mxetwmfnoc" path="res://keyboard.gd" id="1_yo7bg"]
-[ext_resource type="PackedScene" uid="uid://m78r2dh0n8ax" path="res://full_consonants.tscn" id="3_d8yjl"]
-[ext_resource type="PackedScene" uid="uid://bdvb205ws0ic1" path="res://full_vowels.tscn" id="3_rpc6l"]
+[ext_resource type="Script" uid="uid://c24mxetwmfnoc" path="res://keyboard/keyboard.gd" id="1_yo7bg"]
+[ext_resource type="PackedScene" uid="uid://m78r2dh0n8ax" path="res://keyboard/keypads/modified_consonants.tscn" id="3_d8yjl"]
+[ext_resource type="PackedScene" uid="uid://bdvb205ws0ic1" path="res://keyboard/keypads/modified_vowels.tscn" id="3_rpc6l"]
 
 [node name="Keyboard" type="Control" unique_id=1540252945]
 layout_mode = 3

@@ -1,4 +1,4 @@
-extends TypePad
+extends BasicKeyPad
 
 func _ready() -> void:
 	var plosives = [

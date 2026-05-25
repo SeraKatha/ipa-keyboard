@@ -1,6 +1,5 @@
-extends Control
+extends ModifiedKeyPad
 
-signal typed(sound : String)
 
 @onready var _aspirated: Button = %Aspirated
 @onready var _ejective: Button = %Ejective
@@ -22,12 +21,4 @@ func _on_basic_consonants_typed(sound: String) -> void:
 	sound = _apply_if(_glottalized,    sound, "%s\u02C0")
 	sound = _apply_if(_ejective,       sound, "%s\u02BC")
 	sound = _apply_if(_affricative,    sound, "\u0361%s")
-	typed.emit(sound)
-
-
-func _apply_if(button : Button, sound  : String, modifier : String):
-	if button.button_pressed:
-		button.button_pressed = false;
-		return modifier % sound;
-	else:
-		return sound
+	_emit_typed(sound)

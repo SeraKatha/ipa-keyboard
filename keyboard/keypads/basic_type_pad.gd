@@ -1,4 +1,4 @@
-@abstract class_name TypePad extends GridContainer
+@abstract class_name BasicKeyPad extends GridContainer
 
 const KEY = preload("uid://efvn2xxhdkox")
 const COLUMN_SEPARATOR = preload("uid://dky447s4ugvjc")

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://m78r2dh0n8ax"]
 
-[ext_resource type="Script" uid="uid://bmi884mhivdg1" path="res://full_consonants.gd" id="1_jo3sf"]
-[ext_resource type="PackedScene" uid="uid://hn7nb6xskwrv" path="res://basic_consonants.tscn" id="2_32tnf"]
+[ext_resource type="Script" uid="uid://bmi884mhivdg1" path="res://keyboard/keypads/modified_consonants.gd" id="1_jo3sf"]
+[ext_resource type="PackedScene" uid="uid://hn7nb6xskwrv" path="res://keyboard/keypads/basic_consonants.tscn" id="2_32tnf"]
 
 [node name="FullConsonants" type="VBoxContainer" unique_id=1951096994]
 anchors_preset = 15

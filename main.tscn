@@ -2,7 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://cns6dfpuu684e" path="res://themes/default.tres" id="1_h2yge"]
 [ext_resource type="Script" uid="uid://1w6s6kfrc8ou" path="res://main.gd" id="1_ig7tw"]
-[ext_resource type="PackedScene" uid="uid://bm4iou4241gt4" path="res://keyboard.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://bm4iou4241gt4" path="res://keyboard/keyboard.tscn" id="2_0xm2m"]
 
 [node name="Main" type="Control" unique_id=811774897]
 layout_mode = 3

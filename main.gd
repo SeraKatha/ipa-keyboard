@@ -33,11 +33,6 @@ func _on_keyboard_typed_sound(sound: String) -> void:
 	_refresh_text()
 	_caret_stops.append(caret_column);
 	_preview.caret_column = caret_column + 1
-	
-
-#func _process(_delta: float) -> void:
-	#print(get_window().size)
-
 
 func _on_keyboard_pressed_copy() -> void:
 	DisplayServer.clipboard_set(_current_text)

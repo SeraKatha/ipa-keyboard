@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://bdvb205ws0ic1"]
 
-[ext_resource type="Script" uid="uid://ckijkn0vogdfy" path="res://full_vowels.gd" id="1_fr1mr"]
-[ext_resource type="PackedScene" uid="uid://b0ji8qgfcamc0" path="res://basic_vowels.tscn" id="2_021qa"]
+[ext_resource type="Script" uid="uid://ckijkn0vogdfy" path="res://keyboard/keypads/modified_vowels.gd" id="1_tkjjm"]
+[ext_resource type="PackedScene" uid="uid://b0ji8qgfcamc0" path="res://keyboard/keypads/basic_vowels.tscn" id="2_5pl25"]
 
 [node name="FullVowels" type="VBoxContainer" unique_id=1166248587]
 size_flags_horizontal = 3
-script = ExtResource("1_fr1mr")
+script = ExtResource("1_tkjjm")
 
-[node name="BasicVowels" parent="." unique_id=1474821788 instance=ExtResource("2_021qa")]
+[node name="BasicVowels" parent="." unique_id=1474821788 instance=ExtResource("2_5pl25")]
 unique_name_in_owner = true
 layout_mode = 2
 
