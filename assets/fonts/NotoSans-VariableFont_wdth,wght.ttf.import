@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://dc6nssxep0c3i"
-path="res://.godot/imported/NotoSans-SemiBold.ttf-f1db3004a1fd415f3df21eb9af475032.fontdata"
+uid="uid://d0sd5rq7vr27h"
+path="res://.godot/imported/NotoSans-VariableFont_wdth,wght.ttf-6e69723876ef46b25a34982217246272.fontdata"
 
 [deps]
 
-source_file="res://fonts/NotoSans-SemiBold.ttf"
-dest_files=["res://.godot/imported/NotoSans-SemiBold.ttf-f1db3004a1fd415f3df21eb9af475032.fontdata"]
+source_file="res://assets/fonts/NotoSans-VariableFont_wdth,wght.ttf"
+dest_files=["res://.godot/imported/NotoSans-VariableFont_wdth,wght.ttf-6e69723876ef46b25a34982217246272.fontdata"]
 
 [params]
 
@@ -30,7 +30,12 @@ Fallbacks=null
 fallbacks=[]
 Compress=null
 compress=true
-preload=[]
+preload=[{
+"chars": [],
+"glyphs": [],
+"name": "New Configuration",
+"size": Vector2i(16, 0)
+}]
 language_support={}
 script_support={}
 opentype_features={}
