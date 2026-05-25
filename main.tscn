@@ -28,6 +28,7 @@ editable = false
 selecting_enabled = false
 virtual_keyboard_enabled = false
 virtual_keyboard_show_on_focus = false
+caret_force_displayed = true
 
 [node name="Keyboard" parent="Container" unique_id=684675916 instance=ExtResource("2_0xm2m")]
 unique_name_in_owner = true
@@ -36,4 +37,7 @@ layout_mode = 2
 [connection signal="pressed_backspace" from="Container/Keyboard" to="." method="_on_keyboard_pressed_backspace"]
 [connection signal="pressed_clear" from="Container/Keyboard" to="." method="_on_keyboard_pressed_clear"]
 [connection signal="pressed_copy" from="Container/Keyboard" to="." method="_on_keyboard_pressed_copy"]
+[connection signal="pressed_delete" from="Container/Keyboard" to="." method="_on_keyboard_pressed_delete"]
+[connection signal="pressed_left" from="Container/Keyboard" to="." method="_on_keyboard_pressed_left"]
+[connection signal="pressed_right" from="Container/Keyboard" to="." method="_on_keyboard_pressed_right"]
 [connection signal="typed_sound" from="Container/Keyboard" to="." method="_on_keyboard_typed_sound"]
