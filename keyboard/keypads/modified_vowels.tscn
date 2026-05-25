@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ckijkn0vogdfy" path="res://keyboard/keypads/modified_vowels.gd" id="1_tkjjm"]
 [ext_resource type="PackedScene" uid="uid://b0ji8qgfcamc0" path="res://keyboard/keypads/basic_vowels.tscn" id="2_5pl25"]
+[ext_resource type="PackedScene" uid="uid://dx7j1g7c5cv1i" path="res://keyboard/keys/modifier_key.tscn" id="3_5pl25"]
 
 [node name="FullVowels" type="VBoxContainer" unique_id=1166248587]
 size_flags_horizontal = 3
@@ -14,36 +15,24 @@ layout_mode = 2
 [node name="Diphthong" type="HBoxContainer" parent="." unique_id=928834503]
 layout_mode = 2
 
-[node name="DiphthongToggle" type="Button" parent="Diphthong" unique_id=75157903]
+[node name="DiphthongToggle" parent="Diphthong" unique_id=633097217 instance=ExtResource("3_5pl25")]
 unique_name_in_owner = true
 layout_mode = 2
-size_flags_horizontal = 3
-toggle_mode = true
 text = "◌̯"
 
-[node name="LongVowel" type="Button" parent="Diphthong" unique_id=340814562]
+[node name="LongVowel" parent="Diphthong" unique_id=1188255776 instance=ExtResource("3_5pl25")]
 unique_name_in_owner = true
 layout_mode = 2
-size_flags_horizontal = 3
-toggle_mode = true
 text = "◌ː"
 
-[node name="HalfLongVowel" type="Button" parent="Diphthong" unique_id=698636816]
+[node name="HalfLongVowel" parent="Diphthong" unique_id=884500426 instance=ExtResource("3_5pl25")]
 unique_name_in_owner = true
 layout_mode = 2
-size_flags_horizontal = 3
-toggle_mode = true
 text = "◌ˑ"
 
-[node name="ExtraShortVowel" type="Button" parent="Diphthong" unique_id=622356306]
+[node name="ExtraShortVowel" parent="Diphthong" unique_id=1080118985 instance=ExtResource("3_5pl25")]
 unique_name_in_owner = true
 layout_mode = 2
-size_flags_horizontal = 3
-toggle_mode = true
 text = "◌̆"
 
 [connection signal="typed" from="BasicVowels" to="." method="_on_basic_vowels_typed"]
-[connection signal="toggled" from="Diphthong/DiphthongToggle" to="." method="_on_diphthong_toggle_toggled"]
-[connection signal="toggled" from="Diphthong/LongVowel" to="." method="_on_diphthong_toggle_toggled"]
-[connection signal="toggled" from="Diphthong/HalfLongVowel" to="." method="_on_diphthong_toggle_toggled"]
-[connection signal="toggled" from="Diphthong/ExtraShortVowel" to="." method="_on_diphthong_toggle_toggled"]

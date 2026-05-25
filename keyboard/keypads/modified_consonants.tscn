@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bmi884mhivdg1" path="res://keyboard/keypads/modified_consonants.gd" id="1_jo3sf"]
 [ext_resource type="PackedScene" uid="uid://hn7nb6xskwrv" path="res://keyboard/keypads/basic_consonants.tscn" id="2_32tnf"]
+[ext_resource type="PackedScene" uid="uid://dx7j1g7c5cv1i" path="res://keyboard/keys/modifier_key.tscn" id="3_hpbs3"]
 
 [node name="FullConsonants" type="VBoxContainer" unique_id=1951096994]
 anchors_preset = 15
@@ -21,25 +22,19 @@ layout_mode = 2
 layout_mode = 2
 columns = 5
 
-[node name="Aspirated" type="Button" parent="GridContainer" unique_id=300844679]
+[node name="Aspirated" parent="GridContainer" unique_id=633097217 instance=ExtResource("3_hpbs3")]
 unique_name_in_owner = true
 layout_mode = 2
-size_flags_horizontal = 3
-toggle_mode = true
 text = "◌ʰ"
 
-[node name="Ejective" type="Button" parent="GridContainer" unique_id=1177740687]
+[node name="Ejective" parent="GridContainer" unique_id=1618170759 instance=ExtResource("3_hpbs3")]
 unique_name_in_owner = true
 layout_mode = 2
-size_flags_horizontal = 3
-toggle_mode = true
 text = "◌ʼ"
 
-[node name="Affricative" type="Button" parent="GridContainer" unique_id=1175636327]
+[node name="Affricative" parent="GridContainer" unique_id=1316158150 instance=ExtResource("3_hpbs3")]
 unique_name_in_owner = true
 layout_mode = 2
-size_flags_horizontal = 3
-toggle_mode = true
 text = "◌͡◌"
 
 [node name="None" type="Control" parent="GridContainer" unique_id=1157074769]
@@ -48,39 +43,29 @@ layout_mode = 2
 [node name="None2" type="Control" parent="GridContainer" unique_id=1366297336]
 layout_mode = 2
 
-[node name="Labialized" type="Button" parent="GridContainer" unique_id=651639859]
+[node name="Labialized" parent="GridContainer" unique_id=2064089731 instance=ExtResource("3_hpbs3")]
 unique_name_in_owner = true
 layout_mode = 2
-size_flags_horizontal = 3
-toggle_mode = true
 text = "◌ʷ"
 
-[node name="Palatalized" type="Button" parent="GridContainer" unique_id=1130293952]
+[node name="Palatalized" parent="GridContainer" unique_id=1108806291 instance=ExtResource("3_hpbs3")]
 unique_name_in_owner = true
 layout_mode = 2
-size_flags_horizontal = 3
-toggle_mode = true
 text = "◌ʲ"
 
-[node name="Velarized" type="Button" parent="GridContainer" unique_id=408721089]
+[node name="Velarized" parent="GridContainer" unique_id=235476041 instance=ExtResource("3_hpbs3")]
 unique_name_in_owner = true
 layout_mode = 2
-size_flags_horizontal = 3
-toggle_mode = true
 text = "◌ˠ"
 
-[node name="Pharyngealized" type="Button" parent="GridContainer" unique_id=314506533]
+[node name="Pharyngealized" parent="GridContainer" unique_id=814200986 instance=ExtResource("3_hpbs3")]
 unique_name_in_owner = true
 layout_mode = 2
-size_flags_horizontal = 3
-toggle_mode = true
 text = "◌ˤ"
 
-[node name="Glottalized" type="Button" parent="GridContainer" unique_id=2081123114]
+[node name="Glottalized" parent="GridContainer" unique_id=631264704 instance=ExtResource("3_hpbs3")]
 unique_name_in_owner = true
 layout_mode = 2
-size_flags_horizontal = 3
-toggle_mode = true
 text = "◌ˀ"
 
 [connection signal="typed" from="BasicConsonants" to="." method="_on_basic_consonants_typed"]

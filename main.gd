@@ -2,7 +2,6 @@ extends Control
 
 
 @onready var _preview: LineEdit = %Preview
-@onready var _container: VBoxContainer = %Container
 
 
 var _current_input : PackedStringArray = [];

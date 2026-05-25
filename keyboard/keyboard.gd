@@ -12,8 +12,6 @@ func _on_copy_pressed() -> void:
 	pressed_copy.emit()
 
 
-
-
 func _on_clear_pressed() -> void:
 	pressed_clear.emit()
 
