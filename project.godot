@@ -52,6 +52,10 @@ delete={
 ]
 }
 
+[input_devices]
+
+buffering/agile_event_flushing=true
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
