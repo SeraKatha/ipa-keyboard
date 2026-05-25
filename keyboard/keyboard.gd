@@ -41,11 +41,11 @@ func _on_typed(sound: String) -> void:
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("copy"):
 		_on_copy_pressed();
-	if event.is_action("backspace"):
+	if event.is_action("backspace") and event.is_pressed():
 		_on_backspace_pressed();
-	if event.is_action("delete"):
+	if event.is_action("delete") and event.is_pressed():
 		_on_delete_pressed();
-	if event.is_action("cursor_left"):
+	if event.is_action("cursor_left") and event.is_pressed():
 		_on_pressed_left();
-	if event.is_action("cursor_right"):
+	if event.is_action("cursor_right") and event.is_pressed():
 		_on_pressed_right();

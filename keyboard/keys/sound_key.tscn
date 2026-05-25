@@ -1,7 +1,20 @@
 [gd_scene format=3 uid="uid://efvn2xxhdkox"]
 
+[ext_resource type="Script" uid="uid://perbg0818ejo" path="res://keyboard/keys/sound_key.gd" id="1_ymf0y"]
+
 [node name="Key" type="Button" unique_id=633097217]
 size_flags_horizontal = 3
 size_flags_vertical = 0
 focus_mode = 0
 action_mode = 0
+script = ExtResource("1_ymf0y")
+
+[node name="KeyboardHint" type="Label" parent="." unique_id=1576381279]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 39.0
+offset_bottom = 22.0
+theme_override_font_sizes/font_size = 8
+text = "X"
