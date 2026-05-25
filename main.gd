@@ -42,7 +42,8 @@ func _on_keyboard_pressed_copy() -> void:
 func _on_keyboard_pressed_clear() -> void:
 	_current_input = []
 	_refresh_text()
-	_preview.caret_column = 0;
+	_preview.caret_column = 0
+	_cursor_position = 0
 	_refresh_caret()
 	
 
