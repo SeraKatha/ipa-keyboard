@@ -167,25 +167,25 @@ func _ready() -> void:
 		[null, null],
 		[
 			null,
-			sound("ʋ").overide_name("v_approx"),
+			sound("ʋ").overide_name("approximant_labiodental"),
 		],
 		[null, null],
 		[
 			null,
-			sound("ɹ").overide_name("r_approx")
+			sound("ɹ").overide_name("approximant_alveolar"),
 		],
 		[null, null],
 		[
 			null,
-			sound("ɻ").overide_name("r_approx_retroflex")
+			sound("ɻ").overide_name("approximant_retroflex"),
 		],
 		[
 			null,
-			sound("j")
+			sound("j").overide_name("approximant_palatal"),
 		],
 		[
 			null,
-			sound("ɰ").overide_name("g_approximant")
+			sound("ɰ").overide_name("approximant_velar"),
 		],
 		[null, null],
 		[null, null],
@@ -198,20 +198,20 @@ func _ready() -> void:
 		[null, null],
 		[
 			null,
-			sound("l").overide_name("l_1"),
+			sound("l").overide_name("approximant_lateral_alveolar"),
 		],
 		[null, null],
 		[
 			null,
-			sound("ɭ").overide_name("l_2"),
+			sound("ɭ").overide_name("approximant_lateral_retroflex"),
 		],
 		[
 			null,
-			sound("ʎ").overide_name("l_3"),
+			sound("ʎ").overide_name("approximant_lateral_palatal"),
 		],
 		[
 			null,
-			sound("ʟ").overide_name("l_4"),
+			sound("ʟ").overide_name("approximant_lateral_velar"),
 		],
 		[null, null],
 		[null, null],
