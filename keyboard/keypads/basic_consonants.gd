@@ -72,26 +72,26 @@ func _ready() -> void:
 	]
 	
 	var trills = [
-		[null, sound("ʙ").overide_name("b_trill")],
+		[null, sound("ʙ").overide_name("trill_bilabial")],
 		[null, null],
 		[null, null],
-		[null, sound("r").overide_name("r_trill_aveolar")],
+		[null, sound("r").overide_name("trill_aveolar")],
 		[null, null],
 		[null, null],
 		[null, null],
 		[null, null],
-		[null, sound("ʀ").overide_name("r_trill_uvular")],
+		[null, sound("ʀ").overide_name("trill_uvular")],
 		[null, null],
 		[null, null],
 	]
 	
 	var taps = [
 		[null, null],
-		[null, sound("ⱱ").overide_name("v_tap")],
+		[null, sound("ⱱ").overide_name("tap_labiodental")],
 		[null, null],
-		[null, sound("ɾ").overide_name("r_tap")],
+		[null, sound("ɾ").overide_name("tap_alveolar")],
 		[null, null],
-		[null, sound("ɽ").overide_name("r_tap_retroflex")],
+		[null, sound("ɽ").overide_name("tap_retroflex")],
 		[null, null],
 		[null, null],
 		[null, null],
