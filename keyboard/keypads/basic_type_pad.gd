@@ -50,9 +50,7 @@ class Sound:
 	func get_action_name():
 		return "ipa_%s" % _name;
 	func get_primary_event() -> InputEvent:
-		var str = get_action_name()
-		print(str)
-		var input_actions = InputMap.action_get_events(str)
+		var input_actions = InputMap.action_get_events(get_action_name())
 		if input_actions.is_empty():
 			return null
 		else:

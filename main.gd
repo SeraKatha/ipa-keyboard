@@ -2,7 +2,10 @@ extends Control
 
 
 @onready var _preview: LineEdit = %Preview
+@onready var _container: VBoxContainer = %Container
+var _keyboard
 
+const KEYBOARD = preload("uid://bm4iou4241gt4")
 
 var _current_input : PackedStringArray = [];
 var _current_text : String = ""
@@ -16,20 +19,42 @@ func _init_config():
 		for action in InputMap.get_actions():
 			if action.begins_with("ipa_"):
 				var action_event : InputEvent = InputMap.action_get_events(action)[0]
-				config.set_value("keybindings", action, action_event.as_text())
+				config.set_value("key_bindings", action, action_event.as_text().to_lower())
 		config.save("user://config.cfg")
-		
 
-func _ready() -> void:
-	_init_config()
-	var config = ConfigFile.new();
+
+func _load_config():
+	var config = ConfigFile.new()
 	config.load("user://config.cfg")
 	var application_scale = config.get_value("ui", "scale", 1.0)
 	get_tree().root.content_scale_factor = application_scale
 	DisplayServer.window_set_size(Vector2i(1020, 416) * application_scale)
-	ConfigFile.new()
-	
-	
+	for key in config.get_section_keys("key_bindings"):
+		var event_action_str = config.get_value("key_bindings", key).to_lower()
+		var event_action_keys = event_action_str.split("+")
+		var input_event_key = InputMap.action_get_events(key)[0]
+		#print(event_action_keys)
+		input_event_key.shift_pressed = event_action_keys.has("shift")
+		input_event_key.ctrl_pressed = event_action_keys.has("ctrl")
+		input_event_key.alt_pressed = event_action_keys.has("alt")
+		input_event_key.keycode = OS.find_keycode_from_string(event_action_keys[-1])
+
+
+func _ready() -> void:
+	_init_config()
+	_load_config()
+	_keyboard = KEYBOARD.instantiate()
+	_container.add_child(_keyboard)
+	_keyboard.pressed_backspace.connect(_on_keyboard_pressed_backspace)
+	_keyboard.pressed_clear.connect(_on_keyboard_pressed_clear)
+	_keyboard.pressed_close.connect(_on_keyboard_pressed_close)
+	_keyboard.pressed_copy.connect(_on_keyboard_pressed_copy)
+	_keyboard.pressed_delete.connect(_on_keyboard_pressed_delete)
+	_keyboard.pressed_left.connect(_on_keyboard_pressed_left)
+	_keyboard.pressed_right.connect(_on_keyboard_pressed_right)
+	_keyboard.typed_sound.connect(_on_keyboard_typed_sound)
+
+
 func _on_keyboard_typed_sound(sound: String) -> void:
 	_current_input.insert(_cursor_position, sound)
 	_refresh_text()
