@@ -13,12 +13,15 @@ func _init_config():
 	if not FileAccess.file_exists("user://config.cfg"):
 		var config = ConfigFile.new()
 		config.set_value("ui", "scale", 1.0)
+		for action in InputMap.get_actions():
+			if action.begins_with("ipa_"):
+				var action_event : InputEvent = InputMap.action_get_events(action)[0]
+				config.set_value("keybindings", action, action_event.as_text())
 		config.save("user://config.cfg")
-
+		
 
 func _ready() -> void:
 	_init_config()
-	
 	var config = ConfigFile.new();
 	config.load("user://config.cfg")
 	var application_scale = config.get_value("ui", "scale", 1.0)
