@@ -11,6 +11,7 @@ signal pressed_left()
 signal pressed_right()
 signal pressed_close()
 
+@onready var _modifier_pad: ModifierPad = %ModifierPad
 
 func _on_copy_pressed() -> void:
 	pressed_copy.emit()
@@ -57,3 +58,15 @@ func _input(event: InputEvent) -> void:
 
 func _on_close_pressed() -> void:
 	pressed_close.emit()
+
+
+func _on_basic_consonants_typed(sound: String) -> void:
+	_modifier_pad.apply(sound)
+
+
+func _on_basic_vowels_typed(sound: String) -> void:
+	_modifier_pad.apply(sound)
+
+
+func _on_modifier_pad_typed(sound: String) -> void:
+	typed_sound.emit(sound)

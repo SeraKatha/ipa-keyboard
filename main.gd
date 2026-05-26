@@ -28,12 +28,11 @@ func _load_config():
 	config.load("user://config.cfg")
 	var application_scale = config.get_value("ui", "scale", 1.0)
 	get_tree().root.content_scale_factor = application_scale
-	DisplayServer.window_set_size(Vector2i(1020, 451) * application_scale)
+	DisplayServer.window_set_size(Vector2i(1020, 364) * application_scale)
 	for key in config.get_section_keys("key_bindings"):
 		var event_action_str = config.get_value("key_bindings", key).to_lower()
 		var event_action_keys = event_action_str.split("+")
 		var input_event_key = InputMap.action_get_events(key)[0]
-		#print(event_action_keys)
 		input_event_key.shift_pressed = event_action_keys.has("shift")
 		input_event_key.ctrl_pressed = event_action_keys.has("ctrl")
 		input_event_key.alt_pressed = event_action_keys.has("alt")
