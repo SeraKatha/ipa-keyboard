@@ -23,7 +23,7 @@ func _ready() -> void:
 	config.load("user://config.cfg")
 	var application_scale = config.get_value("ui", "scale", 1.0)
 	get_tree().root.content_scale_factor = application_scale
-	DisplayServer.window_set_size(Vector2i(1020, 420) * application_scale)
+	DisplayServer.window_set_size(Vector2i(1020, 416) * application_scale)
 	ConfigFile.new()
 	
 	
@@ -91,3 +91,7 @@ func _on_keyboard_pressed_right() -> void:
 	if _cursor_position < _current_input.size():
 		_cursor_position += 1;
 		_refresh_caret()
+
+
+func _on_keyboard_pressed_close() -> void:
+	get_tree().quit()

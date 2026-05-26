@@ -36,6 +36,7 @@ layout_mode = 2
 
 [connection signal="pressed_backspace" from="Container/Keyboard" to="." method="_on_keyboard_pressed_backspace"]
 [connection signal="pressed_clear" from="Container/Keyboard" to="." method="_on_keyboard_pressed_clear"]
+[connection signal="pressed_close" from="Container/Keyboard" to="." method="_on_keyboard_pressed_close"]
 [connection signal="pressed_copy" from="Container/Keyboard" to="." method="_on_keyboard_pressed_copy"]
 [connection signal="pressed_delete" from="Container/Keyboard" to="." method="_on_keyboard_pressed_delete"]
 [connection signal="pressed_left" from="Container/Keyboard" to="." method="_on_keyboard_pressed_left"]
