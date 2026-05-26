@@ -39,33 +39,33 @@ func _ready() -> void:
 	var nasals = [
 		[
 			null,
-			sound("m")
+			sound("m").overide_name("nasal_bilabial")
 		],
 		[
 			null,
-			sound("ɱ").overide_name("m_labiodental")
+			sound("ɱ").overide_name("nasal_labiodental")
 		],
 		[null, null],
 		[null, null],
 		[
 			null,
-			sound("n")
+			sound("n").overide_name("nasal_alveolar")
 		],
 		[
 			null,
-			sound("ɳ").overide_name("n_retroflex")
+			sound("ɳ").overide_name("nasal_retroflex")
 		],
 		[
 			null,
-			sound("ɲ").overide_name("n_palatal")
+			sound("ɲ").overide_name("nasal_palatal")
 		],
 		[
 			null,
-			sound("ŋ").overide_name("n_velar")
+			sound("ŋ").overide_name("nasal_velar")
 		],
 		[
 			null,
-			sound("ɴ").overide_name("n_uvular")
+			sound("ɴ").overide_name("nasal_uvular")
 		],
 		[null, null],
 		[null, null],
