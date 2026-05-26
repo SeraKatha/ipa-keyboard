@@ -11,6 +11,7 @@ signal pressed_left()
 signal pressed_right()
 signal pressed_close()
 
+
 func _on_copy_pressed() -> void:
 	pressed_copy.emit()
 

@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://c24mxetwmfnoc" path="res://keyboard/keyboard.gd" id="1_yo7bg"]
 [ext_resource type="PackedScene" uid="uid://m78r2dh0n8ax" path="res://keyboard/keypads/modified_consonants.tscn" id="3_d8yjl"]
 [ext_resource type="PackedScene" uid="uid://bdvb205ws0ic1" path="res://keyboard/keypads/modified_vowels.tscn" id="3_rpc6l"]
+[ext_resource type="PackedScene" uid="uid://7uwxw4dy4nnb" path="res://keyboard/keypads/boundary_bar.tscn" id="4_eo0w7"]
 
 [node name="Keyboard" type="Control" unique_id=1540252945]
 layout_mode = 3
@@ -32,7 +33,13 @@ dragger_visibility = 1
 layout_mode = 2
 size_flags_stretch_ratio = 2.0
 
-[node name="FullVowels" parent="VBoxContainer/HBoxContainer" unique_id=1166248587 instance=ExtResource("3_rpc6l")]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer" unique_id=493729740]
+layout_mode = 2
+
+[node name="FullVowels" parent="VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1166248587 instance=ExtResource("3_rpc6l")]
+layout_mode = 2
+
+[node name="BoundaryBar" parent="VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1333714843 instance=ExtResource("4_eo0w7")]
 layout_mode = 2
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer" unique_id=1222996909]
@@ -67,7 +74,8 @@ focus_mode = 0
 text = "↓"
 
 [connection signal="typed" from="VBoxContainer/HBoxContainer/FullConsonants" to="." method="_on_typed"]
-[connection signal="typed" from="VBoxContainer/HBoxContainer/FullVowels" to="." method="_on_typed"]
+[connection signal="typed" from="VBoxContainer/HBoxContainer/VBoxContainer/FullVowels" to="." method="_on_typed"]
+[connection signal="typed_sound" from="VBoxContainer/HBoxContainer/VBoxContainer/BoundaryBar" to="." method="_on_typed"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer2/Copy" to="." method="_on_copy_pressed"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer2/Clear" to="." method="_on_clear_pressed"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer2/Backspace" to="." method="_on_backspace_pressed"]

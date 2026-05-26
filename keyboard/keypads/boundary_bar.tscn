@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://7uwxw4dy4nnb"]
+
+[ext_resource type="Script" uid="uid://bdy02i03s4g7" path="res://keyboard/keypads/boundary_bar.gd" id="1_uqqnw"]
+
+[node name="BoundaryBar" type="HBoxContainer" unique_id=1333714843]
+script = ExtResource("1_uqqnw")
