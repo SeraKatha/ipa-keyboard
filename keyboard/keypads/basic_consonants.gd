@@ -3,35 +3,35 @@ extends BasicKeyPad
 func _ready() -> void:
 	var plosives = [
 		[
-			sound("p"),
-			sound("b"),
+			sound("p").overide_name("plosive_bilabial_unvoiced"),
+			sound("b").overide_name("plosive_bilabial_voiced"),
 		],
 		[null, null],
 		[null, null],
 		[
-			sound("t"),
-			sound("d"),
+			sound("t").overide_name("plosive_alveolar_unvoiced"),
+			sound("d").overide_name("plosive_alveolar_voiced"),
 		],
 		[null, null],
 		[
-			sound("ʈ").overide_name("t_retroflex"),
-			sound("ɖ").overide_name("d_retroflex"),
+			sound("ʈ").overide_name("plosive_retroflex_unvoiced"),
+			sound("ɖ").overide_name("plosive_retroflex_voiced"),
 		],
 		[
-			sound("c"),
-			sound("ɟ").overide_name("j_plosive"),
+			sound("c").overide_name("plosive_palatal_unvoiced"),
+			sound("ɟ").overide_name("plosive_palatal_voiced"),
 		],
 		[
-			sound("k"),
-			sound("g")
+			sound("k").overide_name("plosive_velar_unvoiced"),
+			sound("g").overide_name("plosive_velar_voiced"),
 		],
 		[
-			sound("q"),
-			sound("ɢ").overide_name("g_uvular")
+			sound("q").overide_name("plosive_uvular_unvoiced"),
+			sound("ɢ").overide_name("plosive_uvular_voiced"),
 		],
 		[null, null],
 		[
-			sound("ʔ").overide_name("glottal_stop"),
+			sound("ʔ").overide_name("plosive_glottal"),
 			null
 		],
 	]
