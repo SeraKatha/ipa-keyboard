@@ -15,11 +15,11 @@ func _generate_keyboard_hint(sound : BasicKeyPad.Sound) -> String:
 	if primary_input_action:
 		var hint = OS.get_keycode_string(primary_input_action.keycode).to_lower()
 		if primary_input_action.shift_pressed:
-			hint = "_%s" % hint.to_upper()
-		if primary_input_action.ctrl_pressed:
-			hint = "^%s" % hint
+			hint = "⇧%s" % hint.to_upper()
 		if primary_input_action.alt_pressed:
-			hint = "/%s" % hint
+			hint = "⌥%s" % hint
+		if primary_input_action.ctrl_pressed:
+			hint = "⌃%s" % hint
 		return hint
 	else:
 		return ""
