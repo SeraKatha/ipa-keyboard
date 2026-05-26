@@ -101,48 +101,48 @@ func _ready() -> void:
 	
 	var fricatives = [
 		[
-			sound("ɸ").overide_name("p_fricative"),
-			sound("β").overide_name("b_fricative"),
+			sound("ɸ").overide_name("fricative_bilabial_unvoiced"),
+			sound("β").overide_name("fricative_bilabial_voiced"),
 		],
 		[
-			sound("f"),
-			sound("v")
+			sound("f").overide_name("fricative_labiodental_unvoiced"),
+			sound("v").overide_name("fricative_labiodental_voiced"),
 		],
 		[
-			sound("θ").overide_name("t_fricative"),
-			sound("ð").overide_name("d_fricative"),
+			sound("θ").overide_name("fricative_dental_unvoiced"),
+			sound("ð").overide_name("fricative_dental_voiced"),
 		],
 		[
-			sound("s"),
-			sound("z")
+			sound("s").overide_name("fricative_alveolar_unvoiced"),
+			sound("z").overide_name("fricative_alveolar_voiced"),
 		],
 		[
-			sound("ʃ").overide_name("s_postaveolar"),
-			sound("ʒ").overide_name("z_postaveolar"),
+			sound("ʃ").overide_name("fricative_postaveolar_unvoiced"),
+			sound("ʒ").overide_name("fricative_postaveolar_voiced"),
 		],
 		[
-			sound("ʂ").overide_name("s_retroflex"),
-			sound("ʐ").overide_name("z_retroflex"),
+			sound("ʂ").overide_name("fricative_retroflex_unvoiced"),
+			sound("ʐ").overide_name("fricative_retroflex_voiced"),
 		],
 		[
-			sound("ç").overide_name("c_fricative"),
-			sound("ʝ").overide_name("j_fricative"),
+			sound("ç").overide_name("fricative_palatal_unvoiced"),
+			sound("ʝ").overide_name("fricative_palatal_voiced"),
 		],
 		[
-			sound("x"),
-			sound("ɣ").overide_name("x_voiced")
+			sound("x").overide_name("fricative_velar_unvoiced"),
+			sound("ɣ").overide_name("fricative_velar_voiced"),
 		],
 		[
-			sound("χ").overide_name("x_uvular"),
-			sound("ʁ").overide_name("r_uvular"),
+			sound("χ").overide_name("fricative_uvular_unvoiced"),
+			sound("ʁ").overide_name("fricative_uvular_voiced"),
 		],
 		[
-			sound("ħ").overide_name("h_1"),
-			sound("ʕ").overide_name("h_2"),
+			sound("ħ").overide_name("fricative_pharyngeal_unvoiced"),
+			sound("ʕ").overide_name("fricative_pharyngeal_voiced"),
 		],
 		[
-			sound("h").overide_name("h_3"),
-			sound("ɦ").overide_name("h_4"),
+			sound("h").overide_name("fricative_glotal_unvoiced"),
+			sound("ɦ").overide_name("fricative_glotal_voiced"),
 		],
 	]
 	
@@ -151,8 +151,8 @@ func _ready() -> void:
 		[null, null],
 		[null, null],
 		[
-			sound("ɬ").overide_name("s_lateral"),
-			sound("ɮ").overide_name("z_lateral")
+			sound("ɬ").overide_name("fricative_lateral_alveolar_unvoiced"),
+			sound("ɮ").overide_name("fricative_lateral_alveolar_voiced")
 		],
 		[null, null],
 		[null, null],
