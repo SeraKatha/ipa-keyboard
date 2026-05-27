@@ -10,3 +10,10 @@ func input_event_with_modifiert_to_string(input_event : InputEventWithModifiers)
 	if input_event.ctrl_pressed:
 		hint = "⌃%s" % hint
 	return hint
+
+func get_primary_event(input_action_name : StringName) -> InputEvent:
+		var input_actions = InputMap.action_get_events(input_action_name)
+		if input_actions.is_empty():
+			return null
+		else:
+			return input_actions[0]

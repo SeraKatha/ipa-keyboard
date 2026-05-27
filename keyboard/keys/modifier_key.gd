@@ -8,12 +8,15 @@ var modifier : IPA.Modifier
 func set_modifier(mod : IPA.Modifier) -> void:
 	modifier = mod
 	text = mod.get_ipa_symbol() % "◌"
-	_action = mod.get_input_action()
-	_keyboard_hint.text = _generate_keyboard_hint(mod)
 
 
-func _generate_keyboard_hint(mod : IPA.Modifier) -> String:
-	var primary_input_action := mod.get_primary_event()
+func set_input_action(input_action_name : String) -> void:
+	_keyboard_hint.text = _generate_keyboard_hint(input_action_name)
+	_action = input_action_name
+	
+
+func _generate_keyboard_hint(input_action_name : String) -> String:
+	var primary_input_action := get_primary_event(input_action_name)
 	if primary_input_action:
 		return "⇄%s" % input_event_with_modifiert_to_string(primary_input_action)
 	else:

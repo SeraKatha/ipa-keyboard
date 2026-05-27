@@ -37,7 +37,7 @@ func _on_pressed_right() -> void:
 	pressed_right.emit()
 
 
-func _on_typed(sound: String) -> void:
+func _on_typed(sound: IPA.Sound) -> void:
 	typed_sound.emit(sound)
 
 
