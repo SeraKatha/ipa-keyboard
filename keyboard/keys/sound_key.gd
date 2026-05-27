@@ -6,7 +6,7 @@ var _action : String;
 
 func set_sound(sound : IPA.Sound) -> void:
 	text = sound.get_ipa_symbol()
-	_action = sound.get_action_name()
+	_action = sound.get_input_action()
 	_keyboard_hint.text = _generate_keyboard_hint(sound)
 
 

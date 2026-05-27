@@ -3,35 +3,35 @@ extends BasicKeyPad
 func _ready() -> void:
 	var plosives = [
 		[
-			sound("p").overide_name("plosive_bilabial_unvoiced"),
-			sound("b").overide_name("plosive_bilabial_voiced"),
+			sound("p").input_action("ipa_plosive_bilabial_unvoiced"),
+			sound("b").input_action("ipa_plosive_bilabial_voiced"),
 		],
 		[null, null],
 		[null, null],
 		[
-			sound("t").overide_name("plosive_alveolar_unvoiced"),
-			sound("d").overide_name("plosive_alveolar_voiced"),
+			sound("t").input_action("ipa_plosive_alveolar_unvoiced"),
+			sound("d").input_action("ipa_plosive_alveolar_voiced"),
 		],
 		[null, null],
 		[
-			sound("ʈ").overide_name("plosive_retroflex_unvoiced"),
-			sound("ɖ").overide_name("plosive_retroflex_voiced"),
+			sound("ʈ").input_action("ipa_plosive_retroflex_unvoiced"),
+			sound("ɖ").input_action("ipa_plosive_retroflex_voiced"),
 		],
 		[
-			sound("c").overide_name("plosive_palatal_unvoiced"),
-			sound("ɟ").overide_name("plosive_palatal_voiced"),
+			sound("c").input_action("ipa_plosive_palatal_unvoiced"),
+			sound("ɟ").input_action("ipa_plosive_palatal_voiced"),
 		],
 		[
-			sound("k").overide_name("plosive_velar_unvoiced"),
-			sound("g").overide_name("plosive_velar_voiced"),
+			sound("k").input_action("ipa_plosive_velar_unvoiced"),
+			sound("g").input_action("ipa_plosive_velar_voiced"),
 		],
 		[
-			sound("q").overide_name("plosive_uvular_unvoiced"),
-			sound("ɢ").overide_name("plosive_uvular_voiced"),
+			sound("q").input_action("ipa_plosive_uvular_unvoiced"),
+			sound("ɢ").input_action("ipa_plosive_uvular_voiced"),
 		],
 		[null, null],
 		[
-			sound("ʔ").overide_name("plosive_glottal"),
+			sound("ʔ").input_action("ipa_plosive_glottal"),
 			null
 		],
 	]
@@ -39,59 +39,59 @@ func _ready() -> void:
 	var nasals = [
 		[
 			null,
-			sound("m").overide_name("nasal_bilabial")
+			sound("m").input_action("ipa_nasal_bilabial")
 		],
 		[
 			null,
-			sound("ɱ").overide_name("nasal_labiodental")
+			sound("ɱ").input_action("ipa_nasal_labiodental")
 		],
 		[null, null],
 		[null, null],
 		[
 			null,
-			sound("n").overide_name("nasal_alveolar")
+			sound("n").input_action("ipa_nasal_alveolar")
 		],
 		[
 			null,
-			sound("ɳ").overide_name("nasal_retroflex")
+			sound("ɳ").input_action("ipa_nasal_retroflex")
 		],
 		[
 			null,
-			sound("ɲ").overide_name("nasal_palatal")
+			sound("ɲ").input_action("ipa_nasal_palatal")
 		],
 		[
 			null,
-			sound("ŋ").overide_name("nasal_velar")
+			sound("ŋ").input_action("ipa_nasal_velar")
 		],
 		[
 			null,
-			sound("ɴ").overide_name("nasal_uvular")
+			sound("ɴ").input_action("ipa_nasal_uvular")
 		],
 		[null, null],
 		[null, null],
 	]
 	
 	var trills = [
-		[null, sound("ʙ").overide_name("trill_bilabial")],
+		[null, sound("ʙ").input_action("ipa_trill_bilabial")],
 		[null, null],
 		[null, null],
-		[null, sound("r").overide_name("trill_aveolar")],
+		[null, sound("r").input_action("ipa_trill_aveolar")],
 		[null, null],
 		[null, null],
 		[null, null],
 		[null, null],
-		[null, sound("ʀ").overide_name("trill_uvular")],
+		[null, sound("ʀ").input_action("ipa_trill_uvular")],
 		[null, null],
 		[null, null],
 	]
 	
 	var taps = [
 		[null, null],
-		[null, sound("ⱱ").overide_name("tap_labiodental")],
+		[null, sound("ⱱ").input_action("ipa_tap_labiodental")],
 		[null, null],
-		[null, sound("ɾ").overide_name("tap_alveolar")],
+		[null, sound("ɾ").input_action("ipa_tap_alveolar")],
 		[null, null],
-		[null, sound("ɽ").overide_name("tap_retroflex")],
+		[null, sound("ɽ").input_action("ipa_tap_retroflex")],
 		[null, null],
 		[null, null],
 		[null, null],
@@ -101,48 +101,48 @@ func _ready() -> void:
 	
 	var fricatives = [
 		[
-			sound("ɸ").overide_name("fricative_bilabial_unvoiced"),
-			sound("β").overide_name("fricative_bilabial_voiced"),
+			sound("ɸ").input_action("ipa_fricative_bilabial_unvoiced"),
+			sound("β").input_action("ipa_fricative_bilabial_voiced"),
 		],
 		[
-			sound("f").overide_name("fricative_labiodental_unvoiced"),
-			sound("v").overide_name("fricative_labiodental_voiced"),
+			sound("f").input_action("ipa_fricative_labiodental_unvoiced"),
+			sound("v").input_action("ipa_fricative_labiodental_voiced"),
 		],
 		[
-			sound("θ").overide_name("fricative_dental_unvoiced"),
-			sound("ð").overide_name("fricative_dental_voiced"),
+			sound("θ").input_action("ipa_fricative_dental_unvoiced"),
+			sound("ð").input_action("ipa_fricative_dental_voiced"),
 		],
 		[
-			sound("s").overide_name("fricative_alveolar_unvoiced"),
-			sound("z").overide_name("fricative_alveolar_voiced"),
+			sound("s").input_action("ipa_fricative_alveolar_unvoiced"),
+			sound("z").input_action("ipa_fricative_alveolar_voiced"),
 		],
 		[
-			sound("ʃ").overide_name("fricative_postaveolar_unvoiced"),
-			sound("ʒ").overide_name("fricative_postaveolar_voiced"),
+			sound("ʃ").input_action("ipa_fricative_postaveolar_unvoiced"),
+			sound("ʒ").input_action("ipa_fricative_postaveolar_voiced"),
 		],
 		[
-			sound("ʂ").overide_name("fricative_retroflex_unvoiced"),
-			sound("ʐ").overide_name("fricative_retroflex_voiced"),
+			sound("ʂ").input_action("ipa_fricative_retroflex_unvoiced"),
+			sound("ʐ").input_action("ipa_fricative_retroflex_voiced"),
 		],
 		[
-			sound("ç").overide_name("fricative_palatal_unvoiced"),
-			sound("ʝ").overide_name("fricative_palatal_voiced"),
+			sound("ç").input_action("ipa_fricative_palatal_unvoiced"),
+			sound("ʝ").input_action("ipa_fricative_palatal_voiced"),
 		],
 		[
-			sound("x").overide_name("fricative_velar_unvoiced"),
-			sound("ɣ").overide_name("fricative_velar_voiced"),
+			sound("x").input_action("ipa_fricative_velar_unvoiced"),
+			sound("ɣ").input_action("ipa_fricative_velar_voiced"),
 		],
 		[
-			sound("χ").overide_name("fricative_uvular_unvoiced"),
-			sound("ʁ").overide_name("fricative_uvular_voiced"),
+			sound("χ").input_action("ipa_fricative_uvular_unvoiced"),
+			sound("ʁ").input_action("ipa_fricative_uvular_voiced"),
 		],
 		[
-			sound("ħ").overide_name("fricative_pharyngeal_unvoiced"),
-			sound("ʕ").overide_name("fricative_pharyngeal_voiced"),
+			sound("ħ").input_action("ipa_fricative_pharyngeal_unvoiced"),
+			sound("ʕ").input_action("ipa_fricative_pharyngeal_voiced"),
 		],
 		[
-			sound("h").overide_name("fricative_glotal_unvoiced"),
-			sound("ɦ").overide_name("fricative_glotal_voiced"),
+			sound("h").input_action("ipa_fricative_glotal_unvoiced"),
+			sound("ɦ").input_action("ipa_fricative_glotal_voiced"),
 		],
 	]
 	
@@ -151,8 +151,8 @@ func _ready() -> void:
 		[null, null],
 		[null, null],
 		[
-			sound("ɬ").overide_name("fricative_lateral_alveolar_unvoiced"),
-			sound("ɮ").overide_name("fricative_lateral_alveolar_voiced")
+			sound("ɬ").input_action("ipa_fricative_lateral_alveolar_unvoiced"),
+			sound("ɮ").input_action("ipa_fricative_lateral_alveolar_voiced")
 		],
 		[null, null],
 		[null, null],
@@ -166,29 +166,29 @@ func _ready() -> void:
 	var approximants = [
 		[
 			null, 
-			sound("w").overide_name("approximant_labialvelar"),
+			sound("w").input_action("ipa_approximant_labialvelar"),
 		],
 		[
 			null,
-			sound("ʋ").overide_name("approximant_labiodental"),
-		],
-		[null, null],
-		[
-			null,
-			sound("ɹ").overide_name("approximant_alveolar"),
+			sound("ʋ").input_action("ipa_approximant_labiodental"),
 		],
 		[null, null],
 		[
 			null,
-			sound("ɻ").overide_name("approximant_retroflex"),
+			sound("ɹ").input_action("ipa_approximant_alveolar"),
+		],
+		[null, null],
+		[
+			null,
+			sound("ɻ").input_action("ipa_approximant_retroflex"),
 		],
 		[
 			null,
-			sound("j").overide_name("approximant_palatal"),
+			sound("j").input_action("ipa_approximant_palatal"),
 		],
 		[
 			null,
-			sound("ɰ").overide_name("approximant_velar"),
+			sound("ɰ").input_action("ipa_approximant_velar"),
 		],
 		[null, null],
 		[null, null],
@@ -201,20 +201,20 @@ func _ready() -> void:
 		[null, null],
 		[
 			null,
-			sound("l").overide_name("approximant_lateral_alveolar"),
+			sound("l").input_action("ipa_approximant_lateral_alveolar"),
 		],
 		[null, null],
 		[
 			null,
-			sound("ɭ").overide_name("approximant_lateral_retroflex"),
+			sound("ɭ").input_action("ipa_approximant_lateral_retroflex"),
 		],
 		[
 			null,
-			sound("ʎ").overide_name("approximant_lateral_palatal"),
+			sound("ʎ").input_action("ipa_approximant_lateral_palatal"),
 		],
 		[
 			null,
-			sound("ʟ").overide_name("approximant_lateral_velar"),
+			sound("ʟ").input_action("ipa_approximant_lateral_velar"),
 		],
 		[null, null],
 		[null, null],

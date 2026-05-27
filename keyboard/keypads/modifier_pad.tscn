@@ -1,8 +1,6 @@
 [gd_scene format=3 uid="uid://clum5h5v3nn74"]
 
 [ext_resource type="Script" uid="uid://oma8j1bcn6x3" path="res://keyboard/keypads/modifier_pad.gd" id="1_b3jnn"]
-[ext_resource type="ButtonGroup" uid="uid://bbjy8sm83nphq" path="res://keyboard/keys/vowel_length.tres" id="3_b3jnn"]
-[ext_resource type="PackedScene" uid="uid://dx7j1g7c5cv1i" path="res://keyboard/keys/modifier_key.tscn" id="3_uct01"]
 
 [node name="ModifierPad" type="VBoxContainer" unique_id=1951096994]
 anchors_preset = 15
@@ -14,81 +12,9 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_b3jnn")
 
-[node name="GridContainer" type="GridContainer" parent="." unique_id=1244028546]
+[node name="Keys" type="GridContainer" parent="." unique_id=1244028546]
+unique_name_in_owner = true
 layout_mode = 2
 theme_override_constants/h_separation = 2
 theme_override_constants/v_separation = 2
 columns = 14
-
-[node name="Affricative" parent="GridContainer" unique_id=1316158150 instance=ExtResource("3_uct01")]
-unique_name_in_owner = true
-layout_mode = 2
-text = "◌͡◌"
-
-[node name="Aspirated" parent="GridContainer" unique_id=633097217 instance=ExtResource("3_uct01")]
-unique_name_in_owner = true
-layout_mode = 2
-text = "◌ʰ"
-
-[node name="RhoticHook" parent="GridContainer" unique_id=913849040 instance=ExtResource("3_uct01")]
-unique_name_in_owner = true
-layout_mode = 2
-text = "◌˞"
-
-[node name="RhoticSuperscript" parent="GridContainer" unique_id=1925743945 instance=ExtResource("3_uct01")]
-unique_name_in_owner = true
-layout_mode = 2
-text = "◌ʴ"
-
-[node name="Ejective" parent="GridContainer" unique_id=1618170759 instance=ExtResource("3_uct01")]
-unique_name_in_owner = true
-layout_mode = 2
-text = "◌ʼ"
-
-[node name="Labialized" parent="GridContainer" unique_id=2064089731 instance=ExtResource("3_uct01")]
-unique_name_in_owner = true
-layout_mode = 2
-text = "◌ʷ"
-
-[node name="Palatalized" parent="GridContainer" unique_id=1108806291 instance=ExtResource("3_uct01")]
-unique_name_in_owner = true
-layout_mode = 2
-text = "◌ʲ"
-
-[node name="Velarized" parent="GridContainer" unique_id=235476041 instance=ExtResource("3_uct01")]
-unique_name_in_owner = true
-layout_mode = 2
-text = "◌ˠ"
-
-[node name="Pharyngealized" parent="GridContainer" unique_id=814200986 instance=ExtResource("3_uct01")]
-unique_name_in_owner = true
-layout_mode = 2
-text = "◌ˤ"
-
-[node name="Glottalized" parent="GridContainer" unique_id=631264704 instance=ExtResource("3_uct01")]
-unique_name_in_owner = true
-layout_mode = 2
-text = "◌ˀ"
-
-[node name="Diphthong" parent="GridContainer" unique_id=147828510 instance=ExtResource("3_uct01")]
-unique_name_in_owner = true
-layout_mode = 2
-text = "◌̯"
-
-[node name="ExtraShortVowel" parent="GridContainer" unique_id=1080108607 instance=ExtResource("3_uct01")]
-unique_name_in_owner = true
-layout_mode = 2
-button_group = ExtResource("3_b3jnn")
-text = "◌̆"
-
-[node name="HalfLongVowel" parent="GridContainer" unique_id=1984907372 instance=ExtResource("3_uct01")]
-unique_name_in_owner = true
-layout_mode = 2
-button_group = ExtResource("3_b3jnn")
-text = "◌ˑ"
-
-[node name="LongVowel" parent="GridContainer" unique_id=2042286993 instance=ExtResource("3_uct01")]
-unique_name_in_owner = true
-layout_mode = 2
-button_group = ExtResource("3_b3jnn")
-text = "◌ː"

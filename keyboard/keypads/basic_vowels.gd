@@ -4,89 +4,89 @@ func _ready() -> void:
 	var vowels = [
 		[
 			[
-				sound("i").overide_name("vowel_close_front_unrounded"),
-				sound("y").overide_name("vowel_close_front_rounded"),
+				sound("i").input_action("ipa_vowel_close_front_unrounded"),
+				sound("y").input_action("ipa_vowel_close_front_rounded"),
 			],
 			[null, null],
 			[
-				sound("ɨ").overide_name("vowel_close_central_unrounded"),
-				sound("ʉ").overide_name("vowel_close_central_rounded")
+				sound("ɨ").input_action("ipa_vowel_close_central_unrounded"),
+				sound("ʉ").input_action("ipa_vowel_close_central_rounded")
 			],
 			[null, null],
 			[
-				sound("ɯ").overide_name("vowel_close_back_unrounded"),
-				sound("u").overide_name("vowel_close_back_rounded")
+				sound("ɯ").input_action("ipa_vowel_close_back_unrounded"),
+				sound("u").input_action("ipa_vowel_close_back_rounded")
 			],
 		], 
 		[
 			[null, null],
 			[
-				sound("ɪ").overide_name("vowel_nearclose_nearfront_unrounded"),
-				sound("ʏ").overide_name("vowel_nearclose_nearfront_rounded")
+				sound("ɪ").input_action("ipa_vowel_nearclose_nearfront_unrounded"),
+				sound("ʏ").input_action("ipa_vowel_nearclose_nearfront_rounded")
 			],
 			[null, null],
 			[
-				sound("ʊ").overide_name("vowel_nearclose_nearback"),
+				sound("ʊ").input_action("ipa_vowel_nearclose_nearback"),
 				null
 			],
 			[null, null],
 		], 
 		[
 			[
-				sound("e").overide_name("vowel_closemid_front_unrounded"),
-				sound("ø").overide_name("vowel_closemid_front_rounded"),
+				sound("e").input_action("ipa_vowel_closemid_front_unrounded"),
+				sound("ø").input_action("ipa_vowel_closemid_front_rounded"),
 			],
 			[null, null],
 			[
-				sound("ɘ").overide_name("vowel_closemid_central_unrounded"),
-				sound("ɵ").overide_name("vowel_closemid_central_rounded"),
+				sound("ɘ").input_action("ipa_vowel_closemid_central_unrounded"),
+				sound("ɵ").input_action("ipa_vowel_closemid_central_rounded"),
 			],
 			[null, null],
 			[
-				sound("ɤ").overide_name("vowel_closemid_back_unrounded"),
-				sound("o").overide_name("vowel_closemid_back_rounded")
+				sound("ɤ").input_action("ipa_vowel_closemid_back_unrounded"),
+				sound("o").input_action("ipa_vowel_closemid_back_rounded")
 			]
 		],
 		[
 			[
-				sound("e̞").overide_name("vowel_mid_front_unrounded"),
-				sound("ø̞").overide_name("vowel_mid_front_rounded")
+				sound("e̞").input_action("ipa_vowel_mid_front_unrounded"),
+				sound("ø̞").input_action("ipa_vowel_mid_front_rounded")
 			],
 			[null, null],
 			[
-				sound("ə").overide_name("vowel_mid_central"),
+				sound("ə").input_action("ipa_vowel_mid_central"),
 				null,
 			],
 			[null, null],
 			[
-				sound("ɤ̞").overide_name("vowel_mid_back_unrounded"),
-				sound("o̞").overide_name("vowel_mid_back_rounded"),
+				sound("ɤ̞").input_action("ipa_vowel_mid_back_unrounded"),
+				sound("o̞").input_action("ipa_vowel_mid_back_rounded"),
 			],
 		],
 		[
 			[
-				sound("ɛ").overide_name("vowel_openmid_front_unrounded"),
-				sound("œ").overide_name("vowel_openmid_front_rounded")
+				sound("ɛ").input_action("ipa_vowel_openmid_front_unrounded"),
+				sound("œ").input_action("ipa_vowel_openmid_front_rounded")
 			],
 			[null, null],
 			[
-				sound("ɜ").overide_name("vowel_openmid_central_unrounded"),
-				sound("ɞ").overide_name("vowel_openmid_central_rounded")
+				sound("ɜ").input_action("ipa_vowel_openmid_central_unrounded"),
+				sound("ɞ").input_action("ipa_vowel_openmid_central_rounded")
 			],
 			[null, null],
 			[
-				sound("ʌ").overide_name("vowel_openmid_back_unrounded"),
-				sound("ɔ").overide_name("vowel_openmid_back_rounded"),
+				sound("ʌ").input_action("ipa_vowel_openmid_back_unrounded"),
+				sound("ɔ").input_action("ipa_vowel_openmid_back_rounded"),
 			],
 		],
 		[
 			[
-				sound("æ").overide_name("vowel_nearopen_front_unrounded"),
+				sound("æ").input_action("ipa_vowel_nearopen_front_unrounded"),
 				null
 			],
 			[null, null],
 			[
-				sound("ɐ").overide_name("vowel_nearopen_central"),
+				sound("ɐ").input_action("ipa_vowel_nearopen_central"),
 				null
 			],
 			[null, null],
@@ -94,18 +94,18 @@ func _ready() -> void:
 		],
 		[
 			[
-				sound("a").overide_name("vowel_open_front_unrounded"),
-				sound("ɶ").overide_name("vowel_open_front_rounded"),
+				sound("a").input_action("ipa_vowel_open_front_unrounded"),
+				sound("ɶ").input_action("ipa_vowel_open_front_rounded"),
 			],
 			[null, null],
 			[
-				sound("ä").overide_name("vowel_open_central"),
+				sound("ä").input_action("ipa_vowel_open_central"),
 				null
 			],
 			[null, null],
 			[
-				sound("ɑ").overide_name("vowel_open_back_unrounded"),
-				sound("ɒ").overide_name("vowel_open_back_rounded")
+				sound("ɑ").input_action("ipa_vowel_open_back_unrounded"),
+				sound("ɒ").input_action("ipa_vowel_open_back_rounded")
 			],
 		],
 	]

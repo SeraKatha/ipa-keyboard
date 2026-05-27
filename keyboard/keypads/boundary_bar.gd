@@ -6,10 +6,10 @@ const SOUND_KEY = preload("uid://efvn2xxhdkox")
 
 func _ready() -> void:
 	var boundaries = [
-		IPA.Sound.new(".").overide_name("boundary_syllable"),
-		IPA.Sound.new("#").overide_name("boundary_word"),
-		IPA.Sound.new("$").overide_name("boundary_phonological_word"),
-		IPA.Sound.new("+").overide_name("boundary_morpheme"),
+		IPA.Sound.new(".").input_action("ipa_boundary_syllable"),
+		IPA.Sound.new("#").input_action("ipa_boundary_word"),
+		IPA.Sound.new("$").input_action("ipa_boundary_phonological_word"),
+		IPA.Sound.new("+").input_action("ipa_boundary_morpheme"),
 	]
 	for boundary in boundaries:
 		var key = SOUND_KEY.instantiate()
