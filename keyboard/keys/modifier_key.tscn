@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dx7j1g7c5cv1i"]
 
 [ext_resource type="Script" uid="uid://dtmkd4gqc327j" path="res://keyboard/keys/modifier_key.gd" id="1_w85qw"]
+[ext_resource type="Theme" uid="uid://wku4ni64ya0y" path="res://themes/hint.tres" id="2_v6owa"]
 
 [node name="Key" type="Button" unique_id=633097217]
 size_flags_horizontal = 3
@@ -13,8 +14,8 @@ script = ExtResource("1_w85qw")
 [node name="KeyboardHint" type="Label" parent="." unique_id=1778027851]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = -1.0
-offset_top = -1.0
-offset_right = 39.0
-offset_bottom = 22.0
-theme_override_font_sizes/font_size = 8
+offset_left = -2.0
+offset_top = -3.0
+offset_right = 38.0
+offset_bottom = 20.0
+theme = ExtResource("2_v6owa")
