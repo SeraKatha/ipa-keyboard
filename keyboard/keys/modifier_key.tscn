@@ -13,9 +13,12 @@ script = ExtResource("1_w85qw")
 
 [node name="KeyboardHint" type="Label" parent="." unique_id=1778027851]
 unique_name_in_owner = true
-layout_mode = 0
-offset_left = -2.0
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -0.5
 offset_top = -3.0
-offset_right = 38.0
-offset_bottom = 20.0
+offset_right = 0.5
+offset_bottom = 11.0
+grow_horizontal = 2
 theme = ExtResource("2_v6owa")
