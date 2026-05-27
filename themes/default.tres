@@ -2,7 +2,26 @@
 
 [ext_resource type="FontFile" uid="uid://dc6nssxep0c3i" path="res://assets/fonts/NotoSans-SemiBold.ttf" id="1_nixot"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gnsgt"]
+content_margin_top = 4.0
+bg_color = Color(0.48, 0.48, 0.48, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2g1ym"]
+content_margin_top = 4.0
+bg_color = Color(0.26293245, 0.26293245, 0.26293245, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1fv3y"]
+content_margin_top = 4.0
+bg_color = Color(0.098728366, 0.098728366, 0.09872832, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l6fbw"]
+bg_color = Color(0.1452662, 0.1452662, 0.1452662, 1)
+
 [resource]
 default_font = ExtResource("1_nixot")
 default_font_size = 16
+Button/styles/hover = SubResource("StyleBoxFlat_gnsgt")
+Button/styles/normal = SubResource("StyleBoxFlat_2g1ym")
+Button/styles/pressed = SubResource("StyleBoxFlat_1fv3y")
 LineEdit/colors/font_uneditable_color = Color(1, 1, 1, 1)
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_l6fbw")
