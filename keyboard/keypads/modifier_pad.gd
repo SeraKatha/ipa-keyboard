@@ -41,6 +41,8 @@ func _ready() -> void:
 		[IPA.Modifier.new("%s\u0306"), "ipa_modifier_extra_short_vowel"],
 	]
 	
+	_keys.columns = modifiers.size()
+	
 	for elem in modifiers:
 		var modifier = elem[0]
 		var action = elem[1]
