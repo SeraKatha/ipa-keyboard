@@ -6,10 +6,10 @@ const SOUND_KEY = preload("uid://efvn2xxhdkox")
 
 func _ready() -> void:
 	var boundaries = [
-		BasicKeyPad.Sound.new(".").overide_name("boundary_syllable"),
-		BasicKeyPad.Sound.new("#").overide_name("boundary_word"),
-		BasicKeyPad.Sound.new("$").overide_name("boundary_phonological_word"),
-		BasicKeyPad.Sound.new("+").overide_name("boundary_morpheme"),
+		IPA.Sound.new(".").overide_name("boundary_syllable"),
+		IPA.Sound.new("#").overide_name("boundary_word"),
+		IPA.Sound.new("$").overide_name("boundary_phonological_word"),
+		IPA.Sound.new("+").overide_name("boundary_morpheme"),
 	]
 	for boundary in boundaries:
 		var key = SOUND_KEY.instantiate()
