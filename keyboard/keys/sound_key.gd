@@ -1,4 +1,4 @@
-extends Button
+extends BasicKey
 
 @onready var _keyboard_hint: Label = %KeyboardHint
 var _action : String;
@@ -11,16 +11,9 @@ func set_sound(sound : BasicKeyPad.Sound) -> void:
 
 
 func _generate_keyboard_hint(sound : BasicKeyPad.Sound) -> String:
-	var primary_input_action = sound.get_primary_event()
+	var primary_input_action := sound.get_primary_event()
 	if primary_input_action:
-		var hint = OS.get_keycode_string(primary_input_action.keycode).to_lower()
-		if primary_input_action.shift_pressed:
-			hint = "⇧%s" % hint.to_upper()
-		if primary_input_action.alt_pressed:
-			hint = "⌥%s" % hint
-		if primary_input_action.ctrl_pressed:
-			hint = "⌃%s" % hint
-		return hint
+		return input_event_with_modifiert_to_string(primary_input_action)
 	else:
 		return ""
 

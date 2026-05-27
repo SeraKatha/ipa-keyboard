@@ -18,7 +18,7 @@ script = ExtResource("1_b3jnn")
 layout_mode = 2
 theme_override_constants/h_separation = 2
 theme_override_constants/v_separation = 2
-columns = 12
+columns = 14
 
 [node name="Affricative" parent="GridContainer" unique_id=1316158150 instance=ExtResource("3_uct01")]
 unique_name_in_owner = true
@@ -29,6 +29,16 @@ text = "◌͡◌"
 unique_name_in_owner = true
 layout_mode = 2
 text = "◌ʰ"
+
+[node name="RhoticHook" parent="GridContainer" unique_id=913849040 instance=ExtResource("3_uct01")]
+unique_name_in_owner = true
+layout_mode = 2
+text = "◌˞"
+
+[node name="RhoticSuperscript" parent="GridContainer" unique_id=1925743945 instance=ExtResource("3_uct01")]
+unique_name_in_owner = true
+layout_mode = 2
+text = "◌ʴ"
 
 [node name="Ejective" parent="GridContainer" unique_id=1618170759 instance=ExtResource("3_uct01")]
 unique_name_in_owner = true
