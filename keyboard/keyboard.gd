@@ -50,6 +50,8 @@ func _input(event: InputEvent) -> void:
 		_on_backspace_pressed();
 	if event.is_action("delete") and event.is_pressed():
 		_on_delete_pressed();
+	if event.is_action("clear") and event.is_pressed():
+		_on_clear_pressed();
 	if event.is_action("cursor_left") and event.is_pressed():
 		_on_pressed_left();
 	if event.is_action("cursor_right") and event.is_pressed():
