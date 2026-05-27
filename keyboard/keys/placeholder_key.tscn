@@ -1,6 +1,0 @@
-[gd_scene format=3 uid="uid://xoeu42eee7ah"]
-
-[node name="PlaceholderKey" type="Button" unique_id=828098883]
-focus_mode = 0
-disabled = true
-text = "—"

@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://xoeu42eee7ah"]
+
+[node name="Placeholder" type="Label" unique_id=350175574]
+modulate = Color(1, 1, 1, 0.2509804)
+offset_right = 24.0
+offset_bottom = 31.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+text = "◌"
+horizontal_alignment = 1
+vertical_alignment = 1
