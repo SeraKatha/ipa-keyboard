@@ -164,7 +164,10 @@ func _ready() -> void:
 	]
 	
 	var approximants = [
-		[null, null],
+		[
+			null, 
+			sound("w").overide_name("approximant_labialvelar"),
+		],
 		[
 			null,
 			sound("ʋ").overide_name("approximant_labiodental"),
