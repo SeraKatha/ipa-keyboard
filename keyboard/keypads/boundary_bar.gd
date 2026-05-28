@@ -6,13 +6,13 @@ const SOUND_KEY = preload("uid://efvn2xxhdkox")
 
 func _ready() -> void:
 	var boundaries = [
-		[IPA_Sound.new("."), "ipa_boundary_syllable"],
-		[IPA_Sound.new("#"), "ipa_boundary_word"],
-		[IPA_Sound.new("$"), "ipa_boundary_phonological_word"],
-		[IPA_Sound.new("+"), "ipa_boundary_morpheme"],
-		[IPA_Sound.new("+"), "ipa_boundary_morpheme"],
-		[IPA_Sound.new("\u02C8"), "ipa_stress_primary"],
-		[IPA_Sound.new("\u02CC"), "ipa_stress_secondary"],
+		[IPA_Sound.from_string("."), "ipa_boundary_syllable"],
+		[IPA_Sound.from_string("#"), "ipa_boundary_word"],
+		[IPA_Sound.from_string("$"), "ipa_boundary_phonological_word"],
+		[IPA_Sound.from_string("+"), "ipa_boundary_morpheme"],
+		[IPA_Sound.from_string("+"), "ipa_boundary_morpheme"],
+		[IPA_Sound.from_string("\u02C8"), "ipa_stress_primary"],
+		[IPA_Sound.from_string("\u02CC"), "ipa_stress_secondary"],
 	]
 	for boundary in boundaries:
 		var key = SOUND_KEY.instantiate()

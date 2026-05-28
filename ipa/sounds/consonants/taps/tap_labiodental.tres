@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="IPA_Sound" format=3 uid="uid://bw1rbfv86ji85"]
+
+[ext_resource type="Script" uid="uid://cxjqku5i8td4x" path="res://ipa/sounds/ipa_sound.gd" id="1_lhgec"]
+
+[resource]
+script = ExtResource("1_lhgec")
+_symbol = "ⱱ"
+metadata/_custom_type_script = "uid://cxjqku5i8td4x"

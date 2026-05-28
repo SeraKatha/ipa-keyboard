@@ -1,1 +1,31 @@
-class_name IPA extends Node
+class_name IPA extends RefCounted
+
+const PLOSIVE_BILABIAL_UNVOICED = preload("uid://b0vhrysvnnmuw")
+const PLOSIVE_BILABIAL_VOICED = preload("uid://cx2a0e8kkc251")
+const PLOSIVE_ALVEOLAR_UNVOICED = preload("uid://ck7srmkl33gxo")
+const PLOSIVE_ALVEOLAR_VOICED = preload("uid://bpc3hg64s21ed")
+const PLOSIVE_RETROFLEX_UNVOICED = preload("uid://jfud5bwjunyg")
+const PLOSIVE_RETROFLEX_VOICED = preload("uid://c24rm2ta1r3i2")
+const PLOSIVE_PALATAL_UNVOICED = preload("uid://mn4xl3dpre85")
+const PLOSIVE_PALATAL_VOICED = preload("uid://bpkk3c6xfxjlu")
+const PLOSIVE_VELAR_UNVOICED = preload("uid://bj7e6t1tddcyq")
+const PLOSIVE_VELAR_VOICED = preload("uid://drjf4mhd8rsxj")
+const PLOSIVE_UVULAR_UNVOICED = preload("uid://bs2m5avtcpb7u")
+const PLOSIVE_UVULAR_VOICED = preload("uid://diva8nkm4hwh4")
+const PLOSIVE_GLOTTAL = preload("uid://bf4aybdg1dl10")
+
+const NASAL_BILABIAL = preload("uid://cbxt0ptdvgoya")
+const NASAL_LABIODENTAL = preload("uid://mu6owria0ont")
+const NASAL_ALVEOLAR = preload("uid://k5s8v4pq54iq")
+const NASAL_RETROFLEX = preload("uid://cu1ftr1761y1h")
+const NASAL_PALATAL = preload("uid://ci32getdieuxf")
+const NASAL_VELAR = preload("uid://c5i05217bc1bw")
+const NASAL_UVULAR = preload("uid://drgxgl05paaqo")
+
+const TRILL_AVEOLAR = preload("uid://b61vmbpjjnf5m")
+const TRILL_BILABIAL = preload("uid://do387e61ev2p1")
+const TRILL_UVULAR = preload("uid://b02al4lfifvg1")
+
+const TAP_LABIODENTAL = preload("uid://bw1rbfv86ji85")
+const TAP_ALVEOLAR = preload("uid://cmg2cq5jaomfo")
+const TAP_RETROFLEX = preload("uid://c8qw0kd5fbwm8")

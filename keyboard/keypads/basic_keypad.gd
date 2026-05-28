@@ -17,31 +17,35 @@ func fill(grid):
 			else:
 				self.add_child(COLUMN_SEPARATOR.instantiate())
 			if pair[0]:
-				var sound_0 = pair[0][0]
-				var action_0 = pair[0][1]
-				var key = SOUND_KEY.instantiate();
-				key.pressed.connect(typed.emit.bind(sound_0))
-				self.add_child(key)
-				key.set_sound(sound_0)
-				key.set_input_action(action_0)
+				_add_sound_button(pair[0])
 			else:
-				var key = PLACEHOLDER_KEY.instantiate();
-				self.add_child(key)
+				_add_place_holder()
 			if pair[1]:
-				var sound_1 = pair[1][0]
-				var action_1 = pair[1][1]
-				var key = SOUND_KEY.instantiate();
-				key.pressed.connect(typed.emit.bind(sound_1))
-				self.add_child(key)
-				key.set_sound(sound_1) 
-				key.set_input_action(action_1)
+				_add_sound_button(pair[1])
 			else:
-				var key = PLACEHOLDER_KEY.instantiate();
-				self.add_child(key)
+				_add_place_holder()
 
 
+func _add_sound_button(sound_action):
+	var zound : IPA_Sound = null
+	var action : String = ""
+	if sound_action is Array and sound_action.size() == 2:
+		zound = sound_action[0]
+		action = sound_action[1]
+	if sound_action is IPA_Sound:
+		zound = sound_action
+		action = "ipa_%s" % zound.get_sound_name()
+	var key = SOUND_KEY.instantiate();
+	key.pressed.connect(typed.emit.bind(zound))
+	self.add_child(key)
+	key.set_sound(zound)
+	key.set_input_action(action)
 
+
+func _add_place_holder():
+	var key = PLACEHOLDER_KEY.instantiate();
+	self.add_child(key)
 
 
 func sound(sound_string : String) -> IPA_Sound:
-	return IPA_Sound.new(sound_string)
+	return IPA_Sound.from_string(sound_string)

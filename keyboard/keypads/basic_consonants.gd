@@ -1,97 +1,116 @@
 extends BasicKeyPad
 
+
 func _ready() -> void:
 	var plosives = [
 		[
-			[sound("p"),"ipa_plosive_bilabial_unvoiced"],
-			[sound("b"),"ipa_plosive_bilabial_voiced"],
+			IPA.PLOSIVE_BILABIAL_UNVOICED,
+			IPA.PLOSIVE_BILABIAL_VOICED,
 		],
 		[null, null],
 		[null, null],
 		[
-			[sound("t"),"ipa_plosive_alveolar_unvoiced"],
-			[sound("d"),"ipa_plosive_alveolar_voiced"],
+			IPA.PLOSIVE_ALVEOLAR_UNVOICED,
+			IPA.PLOSIVE_ALVEOLAR_VOICED,
 		],
 		[null, null],
 		[
-			[sound("ʈ"),"ipa_plosive_retroflex_unvoiced"],
-			[sound("ɖ"),"ipa_plosive_retroflex_voiced"],
+			IPA.PLOSIVE_RETROFLEX_UNVOICED,
+			IPA.PLOSIVE_RETROFLEX_VOICED,
 		],
 		[
-			[sound("c"),"ipa_plosive_palatal_unvoiced"],
-			[sound("ɟ"),"ipa_plosive_palatal_voiced"],
+			IPA.PLOSIVE_PALATAL_UNVOICED,
+			IPA.PLOSIVE_PALATAL_VOICED,
 		],
 		[
-			[sound("k"),"ipa_plosive_velar_unvoiced"],
-			[sound("g"),"ipa_plosive_velar_voiced"],
+			IPA.PLOSIVE_VELAR_UNVOICED,
+			IPA.PLOSIVE_VELAR_VOICED,
 		],
 		[
-			[sound("q"),"ipa_plosive_uvular_unvoiced"],
-			[sound("ɢ"),"ipa_plosive_uvular_voiced"],
+			IPA.PLOSIVE_UVULAR_UNVOICED,
+			IPA.PLOSIVE_UVULAR_VOICED,
 		],
 		[null, null],
 		[
-			[sound("ʔ"),"ipa_plosive_glottal"],
-			null
+			IPA.PLOSIVE_GLOTTAL,
+			null,
 		],
 	]
 	
 	var nasals = [
 		[
 			null,
-			[sound("m"),"ipa_nasal_bilabial"]
+			IPA.NASAL_BILABIAL
 		],
 		[
 			null,
-			[sound("ɱ"),"ipa_nasal_labiodental"]
+			IPA.NASAL_LABIODENTAL,
 		],
 		[null, null],
 		[null, null],
 		[
 			null,
-			[sound("n"),"ipa_nasal_alveolar"]
+			IPA.NASAL_ALVEOLAR
 		],
 		[
 			null,
-			[sound("ɳ"),"ipa_nasal_retroflex"]
+			IPA.NASAL_RETROFLEX
 		],
 		[
 			null,
-			[sound("ɲ"),"ipa_nasal_palatal"]
+			IPA.NASAL_PALATAL
 		],
 		[
 			null,
-			[sound("ŋ"),"ipa_nasal_velar"]
+			IPA.NASAL_VELAR
 		],
 		[
 			null,
-			[sound("ɴ"),"ipa_nasal_uvular"]
+			IPA.NASAL_UVULAR
 		],
 		[null, null],
 		[null, null],
 	]
 	
 	var trills = [
-		[null, [sound("ʙ"),"ipa_trill_bilabial"]],
+		[
+			null,
+			IPA.TRILL_BILABIAL,
+		],
 		[null, null],
 		[null, null],
-		[null, [sound("r"),"ipa_trill_aveolar"]],
+		[
+			null,
+			IPA.TRILL_AVEOLAR,
+		],
 		[null, null],
 		[null, null],
 		[null, null],
 		[null, null],
-		[null, [sound("ʀ"),"ipa_trill_uvular"]],
+		[
+			null,
+			IPA.TRILL_UVULAR
+		],
 		[null, null],
 		[null, null],
 	]
 	
 	var taps = [
 		[null, null],
-		[null, [sound("ⱱ"),"ipa_tap_labiodental"]],
+		[
+			null,
+			IPA.TAP_LABIODENTAL,
+		],
 		[null, null],
-		[null, [sound("ɾ"),"ipa_tap_alveolar"]],
+		[
+			null,
+			IPA.TAP_ALVEOLAR,
+		],
 		[null, null],
-		[null, [sound("ɽ"),"ipa_tap_retroflex"]],
+		[
+			null,
+			IPA.TAP_RETROFLEX
+		],
 		[null, null],
 		[null, null],
 		[null, null],
