@@ -2,6 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://cns6dfpuu684e" path="res://themes/default.tres" id="1_h2yge"]
 [ext_resource type="Script" uid="uid://1w6s6kfrc8ou" path="res://main.gd" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://cv3wb4ak0yufp" path="res://lock.tscn" id="3_h2yge"]
 
 [node name="Main" type="PanelContainer" unique_id=1370378399]
 anchors_preset = 15
@@ -29,9 +30,7 @@ virtual_keyboard_enabled = false
 virtual_keyboard_show_on_focus = false
 caret_force_displayed = true
 
-[node name="LockTimer" type="Timer" parent="." unique_id=1470821946]
-autostart = true
-ignore_time_scale = true
+[node name="Lock" parent="." unique_id=1871514611 instance=ExtResource("3_h2yge")]
+unique_name_in_owner = true
 
 [connection signal="tree_exiting" from="." to="." method="_on_tree_exiting"]
-[connection signal="timeout" from="LockTimer" to="." method="_on_lock_timer_timeout"]

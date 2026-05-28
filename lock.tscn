@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://cv3wb4ak0yufp"]
+
+[ext_resource type="Script" uid="uid://c8w70yv8rf13p" path="res://lock.gd" id="1_l5ccq"]
+
+[node name="Lock" type="Node" unique_id=1871514611]
+script = ExtResource("1_l5ccq")
+
+[node name="LockTimer" type="Timer" parent="." unique_id=149788333]
+autostart = true
+ignore_time_scale = true
+
+[connection signal="timeout" from="LockTimer" to="." method="_on_lock_timer_timeout"]

@@ -13,7 +13,7 @@ var _cursor_position = 0
 var _caret_stop : Array[int] = []
 
 
-const LOCK_EXPIRATION = 2;
+@onready var _lock: Node = %Lock
 
 
 func _init_config():
@@ -32,7 +32,7 @@ func _load_config():
 	config.load("user://config.cfg")
 	var application_scale = config.get_value("ui", "scale", 1.0)
 	get_tree().root.content_scale_factor = application_scale
-	var window_size = Vector2i(Vector2(890, 344) * application_scale)
+	var window_size : Vector2 = Vector2(890, 344) * application_scale
 	DisplayServer.window_set_size(window_size)
 	if config.has_section("key_bindings"):
 		for key in config.get_section_keys("key_bindings"):
@@ -43,28 +43,15 @@ func _load_config():
 			input_event_key.ctrl_pressed = event_action_keys.has("ctrl")
 			input_event_key.alt_pressed = event_action_keys.has("alt")
 			input_event_key.keycode = OS.find_keycode_from_string(event_action_keys[-1])
-	var screen_size : Vector2i = DisplayServer.screen_get_size();
-	var window_position : Vector2i = screen_size / Vector2i(2, 1) - window_size / Vector2i(2, 1)
-	DisplayServer.window_set_position(window_position)
+	var screen_size : Vector2 = DisplayServer.screen_get_size();
+	var window_position : Vector2 = screen_size / Vector2(2.0, 1.0) - window_size / Vector2(2, 1)
+	DisplayServer.window_set_position(Vector2i(round(window_position)))
 
-const FILE_LOCK : String = "user://lock"
-
-func _is_lock_fresh():
-	var lock_file = FileAccess.open(FILE_LOCK, FileAccess.READ)
-	var timestamp_lock = lock_file.get_64()
-	lock_file.close()
-	var timestamp_now = Time.get_unix_time_from_system()
-	var is_already_running = timestamp_now - timestamp_lock < 2
-	return is_already_running
 
 func _ready() -> void:
 	_init_config()
 	_load_config()
-	
-	if FileAccess.file_exists(FILE_LOCK) and _is_lock_fresh():
-		get_tree().quit()
-	else:
-		_refresh_lock()
+	if _lock.try_lock():
 		_keyboard = KEYBOARD.instantiate()
 		_container.add_child(_keyboard)
 		_keyboard.pressed_backspace.connect(_on_keyboard_pressed_backspace)
@@ -75,6 +62,7 @@ func _ready() -> void:
 		_keyboard.pressed_left.connect(_on_keyboard_pressed_left)
 		_keyboard.pressed_right.connect(_on_keyboard_pressed_right)
 		_keyboard.typed_sound.connect(_on_keyboard_typed_sound)
+
 
 
 func _on_keyboard_typed_sound(sound: IPA.Sound) -> void:
@@ -146,18 +134,6 @@ func _on_keyboard_pressed_right() -> void:
 func _on_keyboard_pressed_close() -> void:
 	get_tree().quit()
 
-
-func _refresh_lock():
-	var	lock_file = FileAccess.open(FILE_LOCK, FileAccess.WRITE)
-	lock_file.store_64(Time.get_unix_time_from_system())
-	lock_file.close()
-	
-	
-func _exit_tree() -> void:
-	DirAccess.remove_absolute(FILE_LOCK)
-
-func _on_lock_timer_timeout() -> void:
-	_refresh_lock()
 
 func _on_tree_exiting() -> void:
 	print("AAA")
