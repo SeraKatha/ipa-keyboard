@@ -55,3 +55,15 @@ const FRICATIVE_GLOTAL_VOICED = preload("uid://l51knfrby6to")
 
 const FRICATIVE_LATERAL_ALVEOLAR_UNVOICED = preload("uid://kdfxi4my4fi4")
 const FRICATIVE_LATERAL_ALVEOLAR_VOICED = preload("uid://bbl3fx650encr")
+
+const APPROXIMANT_LABIALVELAR = preload("uid://b1sjpw6sjb6fs")
+const APPROXIMANT_LABIODENTAL = preload("uid://cjdmgl8l517ac")
+const APPROXIMANT_ALVEOLAR = preload("uid://bykqbw2coiur5")
+const APPROXIMANT_RETROFLEX = preload("uid://bnyr8tn5o3tlp")
+const APPROXIMANT_PALATAL = preload("uid://cf40c7flg6bnl")
+const APPROXIMANT_VELAR = preload("uid://who72w0w8ewo")
+
+const APPROXIMANT_LATERAL_ALVEOLAR = preload("uid://c8ge8a7wv55do")
+const APPROXIMANT_LATERAL_RETROFLEX = preload("uid://brrt4damt4fdf")
+const APPROXIMANT_LATERAL_PALATAL = preload("uid://deb0lrdru7773")
+const APPROXIMANT_LATERAL_VELAR = preload("uid://diynqmxna8jin")

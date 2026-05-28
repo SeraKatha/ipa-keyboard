@@ -185,29 +185,29 @@ func _ready() -> void:
 	var approximants = [
 		[
 			null, 
-			[sound("w"),"ipa_approximant_labialvelar"],
+			IPA.APPROXIMANT_LABIALVELAR,
 		],
 		[
 			null,
-			[sound("ʋ"),"ipa_approximant_labiodental"],
-		],
-		[null, null],
-		[
-			null,
-			[sound("ɹ"),"ipa_approximant_alveolar"],
+			IPA.APPROXIMANT_LABIODENTAL,
 		],
 		[null, null],
 		[
 			null,
-			[sound("ɻ"),"ipa_approximant_retroflex"],
+			IPA.APPROXIMANT_ALVEOLAR,
+		],
+		[null, null],
+		[
+			null,
+			IPA.APPROXIMANT_RETROFLEX,
 		],
 		[
 			null,
-			[sound("j"),"ipa_approximant_palatal"],
+			IPA.APPROXIMANT_PALATAL,
 		],
 		[
 			null,
-			[sound("ɰ"),"ipa_approximant_velar"],
+			IPA.APPROXIMANT_VELAR,
 		],
 		[null, null],
 		[null, null],
@@ -220,20 +220,20 @@ func _ready() -> void:
 		[null, null],
 		[
 			null,
-			[sound("l"),"ipa_approximant_lateral_alveolar"],
+			IPA.APPROXIMANT_LATERAL_ALVEOLAR,
 		],
 		[null, null],
 		[
 			null,
-			[sound("ɭ"),"ipa_approximant_lateral_retroflex"],
+			IPA.APPROXIMANT_LATERAL_RETROFLEX,
 		],
 		[
 			null,
-			[sound("ʎ"),"ipa_approximant_lateral_palatal"],
+			IPA.APPROXIMANT_LATERAL_PALATAL,
 		],
 		[
 			null,
-			[sound("ʟ"),"ipa_approximant_lateral_velar"],
+			IPA.APPROXIMANT_LATERAL_VELAR,
 		],
 		[null, null],
 		[null, null],
