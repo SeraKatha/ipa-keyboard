@@ -28,3 +28,10 @@ selecting_enabled = false
 virtual_keyboard_enabled = false
 virtual_keyboard_show_on_focus = false
 caret_force_displayed = true
+
+[node name="LockTimer" type="Timer" parent="." unique_id=1470821946]
+autostart = true
+ignore_time_scale = true
+
+[connection signal="tree_exiting" from="." to="." method="_on_tree_exiting"]
+[connection signal="timeout" from="LockTimer" to="." method="_on_lock_timer_timeout"]
