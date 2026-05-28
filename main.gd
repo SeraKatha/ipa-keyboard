@@ -39,7 +39,7 @@ func _load_config():
 		input_event_key.alt_pressed = event_action_keys.has("alt")
 		input_event_key.keycode = OS.find_keycode_from_string(event_action_keys[-1])
 	var screen_size : Vector2i = DisplayServer.screen_get_size();
-	var window_position : Vector2i = screen_size / Vector2i(2, 1) - window_size / 2
+	var window_position : Vector2i = screen_size / Vector2i(2, 1) - window_size / Vector2i(2, 1)
 	DisplayServer.window_set_position(window_position)
 
 func _ready() -> void:
