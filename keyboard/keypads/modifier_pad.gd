@@ -25,31 +25,31 @@ func _apply_if(button : Button, sound  : IPA_Sound) -> IPA_Sound:
 
 func _ready() -> void:
 	var modifiers = [
-		[IPA.MODIFIER_AFFRICATIVE, "ipa_modifier_affricative"],
-		[IPA.MODIFIER_ASPIRATED, "ipa_modifier_aspirated"],
-		[IPA.MODIFIER_RHOTIC_HOOK, "ipa_modifier_rhotic_hook"],
-		[IPA.MODIFIER_RHOTIC_SUPERSCRIPT, "ipa_modifier_rhotic_superscript"],
-		[IPA.MODIFIER_EJECTIVE, "ipa_modifier_ejective"],
-		[IPA.MODIFIER_LABIALIZED, "ipa_modifier_labialized"],
-		[IPA.MODIFIER_PALATALIZED, "ipa_modifier_palatalized"],
-		[IPA.MODIFIER_VELARIZED, "ipa_modifier_velarized"],
-		[IPA.MODIFIER_PHARYNGEALIZED, "ipa_modifier_pharyngealized"],
-		[IPA.MODIFIER_GLOTTALIZED, "ipa_modifier_glottalized"],
-		[IPA.MODIFIER_DIPHTHONG, "ipa_modifier_diphthong"],
-		[IPA.MODIFIER_LONG_VOWEL, "ipa_modifier_long_vowel"],
-		[IPA.MODIFIER_HALF_LONG_VOWEL, "ipa_modifier_half_long_vowel"],
-		[IPA.MODIFIER_EXTRA_SHORT_VOWEL, "ipa_modifier_extra_short_vowel"],
+		IPA.MODIFIER_AFFRICATIVE,
+		IPA.MODIFIER_ASPIRATED,
+		IPA.MODIFIER_RHOTIC_HOOK,
+		IPA.MODIFIER_RHOTIC_SUPERSCRIPT,
+		IPA.MODIFIER_EJECTIVE,
+		IPA.MODIFIER_LABIALIZED,
+		IPA.MODIFIER_PALATALIZED,
+		IPA.MODIFIER_VELARIZED,
+		IPA.MODIFIER_PHARYNGEALIZED,
+		IPA.MODIFIER_GLOTTALIZED,
+		IPA.MODIFIER_DIPHTHONG,
+		IPA.MODIFIER_LONG_VOWEL,
+		IPA.MODIFIER_HALF_LONG_VOWEL,
+		IPA.MODIFIER_EXTRA_SHORT_VOWEL,
 	]
 	
 	_keys.columns = modifiers.size()
 	
-	for elem in modifiers:
-		var modifier = elem[0]
-		var action = elem[1]
+	for modifier in modifiers:
 		var button = MODIFIER_KEY.instantiate()
+		var action = "ipa_%s" % modifier.get_sound_name()
 		_keys.add_child(button)
 		button.set_modifier(modifier)
 		button.set_input_action(action)
+
 
 func apply(sound : IPA_Sound) -> void:
 	if not _modifier_select:
