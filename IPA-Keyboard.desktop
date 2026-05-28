@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=IPA-Keyboard
 Comment=Virtual Keyboard to write IPA-snippets
-Exec=/opt/ipa-peyboard/ipa-keyboard
+Exec=/opt/ipa-keyboard/ipa-keyboard
 Icon=godot
 Terminal=false
 Type=Application

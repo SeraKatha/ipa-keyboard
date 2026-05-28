@@ -28,7 +28,8 @@ func _load_config():
 	config.load("user://config.cfg")
 	var application_scale = config.get_value("ui", "scale", 1.0)
 	get_tree().root.content_scale_factor = application_scale
-	DisplayServer.window_set_size(Vector2i(890, 344) * application_scale)
+	var window_size = Vector2i(Vector2(890, 344) * application_scale)
+	DisplayServer.window_set_size(window_size)
 	for key in config.get_section_keys("key_bindings"):
 		var event_action_str = config.get_value("key_bindings", key).to_lower()
 		var event_action_keys = event_action_str.split("+")
@@ -37,7 +38,9 @@ func _load_config():
 		input_event_key.ctrl_pressed = event_action_keys.has("ctrl")
 		input_event_key.alt_pressed = event_action_keys.has("alt")
 		input_event_key.keycode = OS.find_keycode_from_string(event_action_keys[-1])
-
+	var screen_size : Vector2i = DisplayServer.screen_get_size();
+	var window_position : Vector2i = screen_size / Vector2i(2, 1) - window_size / 2
+	DisplayServer.window_set_position(window_position)
 
 func _ready() -> void:
 	_init_config()
