@@ -2,7 +2,7 @@ extends Control
 
 const KEY = preload("uid://efvn2xxhdkox")
 
-signal typed_sound(string : IPA.Sound)
+signal typed_sound(string : IPA_Sound)
 signal pressed_copy()
 signal pressed_clear()
 signal pressed_backspace()
@@ -37,7 +37,7 @@ func _on_pressed_right() -> void:
 	pressed_right.emit()
 
 
-func _on_typed(sound: IPA.Sound) -> void:
+func _on_typed(sound: IPA_Sound) -> void:
 	typed_sound.emit(sound)
 
 
@@ -62,13 +62,13 @@ func _on_close_pressed() -> void:
 	pressed_close.emit()
 
 
-func _on_basic_consonants_typed(sound: IPA.Sound) -> void:
+func _on_basic_consonants_typed(sound: IPA_Sound) -> void:
 	_modifier_pad.apply(sound)
 
 
-func _on_basic_vowels_typed(sound: IPA.Sound) -> void:
+func _on_basic_vowels_typed(sound: IPA_Sound) -> void:
 	_modifier_pad.apply(sound)
 
 
-func _on_modifier_pad_typed(sound: IPA.Sound) -> void:
+func _on_modifier_pad_typed(sound: IPA_Sound) -> void:
 	typed_sound.emit(sound)

@@ -4,7 +4,7 @@ const SOUND_KEY = preload("uid://efvn2xxhdkox")
 const PLACEHOLDER_KEY = preload("uid://xoeu42eee7ah")
 const COLUMN_SEPARATOR = preload("uid://dky447s4ugvjc")
 
-signal typed(sound : IPA.Sound)
+signal typed(sound : IPA_Sound)
 
 func fill(grid):
 	self.columns = grid[0].size() * 3 - 1;
@@ -43,5 +43,5 @@ func fill(grid):
 
 
 
-func sound(sound_string : String) -> IPA.Sound:
-	return IPA.Sound.new(sound_string)
+func sound(sound_string : String) -> IPA_Sound:
+	return IPA_Sound.new(sound_string)

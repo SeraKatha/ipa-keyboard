@@ -1,18 +1,18 @@
 extends HBoxContainer
 
-signal typed_sound(string : IPA.Sound)
+signal typed_sound(string : IPA_Sound)
 
 const SOUND_KEY = preload("uid://efvn2xxhdkox")
 
 func _ready() -> void:
 	var boundaries = [
-		[IPA.Sound.new("."), "ipa_boundary_syllable"],
-		[IPA.Sound.new("#"), "ipa_boundary_word"],
-		[IPA.Sound.new("$"), "ipa_boundary_phonological_word"],
-		[IPA.Sound.new("+"), "ipa_boundary_morpheme"],
-		[IPA.Sound.new("+"), "ipa_boundary_morpheme"],
-		[IPA.Sound.new("\u02C8"), "ipa_stress_primary"],
-		[IPA.Sound.new("\u02CC"), "ipa_stress_secondary"],
+		[IPA_Sound.new("."), "ipa_boundary_syllable"],
+		[IPA_Sound.new("#"), "ipa_boundary_word"],
+		[IPA_Sound.new("$"), "ipa_boundary_phonological_word"],
+		[IPA_Sound.new("+"), "ipa_boundary_morpheme"],
+		[IPA_Sound.new("+"), "ipa_boundary_morpheme"],
+		[IPA_Sound.new("\u02C8"), "ipa_stress_primary"],
+		[IPA_Sound.new("\u02CC"), "ipa_stress_secondary"],
 	]
 	for boundary in boundaries:
 		var key = SOUND_KEY.instantiate()
@@ -24,5 +24,5 @@ func _ready() -> void:
 		key.pressed.connect(_on_typed.bind(sound))
 
 
-func _on_typed(sound: IPA.Sound) -> void:
+func _on_typed(sound: IPA_Sound) -> void:
 	typed_sound.emit(sound)

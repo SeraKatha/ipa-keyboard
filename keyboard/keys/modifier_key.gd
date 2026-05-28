@@ -3,9 +3,9 @@ extends BasicKey
 @onready var _keyboard_hint: Label = %KeyboardHint
 var _action : String;
 var modifier_select = false;
-var modifier : IPA.Modifier
+var modifier : IPA_Modifier
 
-func set_modifier(mod : IPA.Modifier) -> void:
+func set_modifier(mod : IPA_Modifier) -> void:
 	modifier = mod
 	text = mod.get_ipa_symbol() % "◌"
 

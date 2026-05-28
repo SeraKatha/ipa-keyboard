@@ -7,7 +7,7 @@ var _keyboard
 
 const KEYBOARD = preload("uid://bm4iou4241gt4")
 
-var _current_input : Array[IPA.Sound] = [];
+var _current_input : Array[IPA_Sound] = [];
 var _current_text : String = ""
 var _cursor_position = 0
 var _caret_stop : Array[int] = []
@@ -78,7 +78,7 @@ func _ready() -> void:
 
 
 
-func _on_keyboard_typed_sound(sound: IPA.Sound) -> void:
+func _on_keyboard_typed_sound(sound: IPA_Sound) -> void:
 	_current_input.insert(_cursor_position, sound)
 	_refresh_text()
 	_caret_stop.push_back(_current_text.length())

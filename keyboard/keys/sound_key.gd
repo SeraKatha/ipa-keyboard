@@ -4,7 +4,7 @@ extends BasicKey
 var _action : String;
 
 
-func set_sound(sound : IPA.Sound) -> void:
+func set_sound(sound : IPA_Sound) -> void:
 	text = sound.get_ipa_symbol()
 
 
