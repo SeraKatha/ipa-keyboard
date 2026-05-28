@@ -10,6 +10,9 @@ func _ready() -> void:
 		[IPA.Sound.new("#"), "ipa_boundary_word"],
 		[IPA.Sound.new("$"), "ipa_boundary_phonological_word"],
 		[IPA.Sound.new("+"), "ipa_boundary_morpheme"],
+		[IPA.Sound.new("+"), "ipa_boundary_morpheme"],
+		[IPA.Sound.new("\u02C8"), "ipa_stress_primary"],
+		[IPA.Sound.new("\u02CC"), "ipa_stress_secondary"],
 	]
 	for boundary in boundaries:
 		var key = SOUND_KEY.instantiate()
