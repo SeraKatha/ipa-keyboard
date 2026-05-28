@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="IPA_Modifier" format=3 uid="uid://beg004gnae3ww"]
+
+[ext_resource type="Script" uid="uid://bvakv8u1adeg3" path="res://ipa/modifiers/ipa_modifier.gd" id="1_bv0fi"]
+
+[resource]
+script = ExtResource("1_bv0fi")
+_symbol = "%sˠ"
+metadata/_custom_type_script = "uid://bvakv8u1adeg3"

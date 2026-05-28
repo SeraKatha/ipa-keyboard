@@ -25,20 +25,20 @@ func _apply_if(button : Button, sound  : IPA_Sound) -> IPA_Sound:
 
 func _ready() -> void:
 	var modifiers = [
-		[IPA_Modifier.new("%s\u0361"), "ipa_modifier_affricative"],
-		[IPA_Modifier.new("%s\u02B0"), "ipa_modifier_aspirated"],
-		[IPA_Modifier.new("%s\u02DE"), "ipa_modifier_rhotic_hook"],
-		[IPA_Modifier.new("%s\u02B4"), "ipa_modifier_rhotic_superscript"],
-		[IPA_Modifier.new("%s\u02BC"), "ipa_modifier_ejective"],
-		[IPA_Modifier.new("%s\u02B7"), "ipa_modifier_labialized"],
-		[IPA_Modifier.new("%s\u02B2"), "ipa_modifier_palatalized"],
-		[IPA_Modifier.new("%s\u02E0"), "ipa_modifier_velarized"],
-		[IPA_Modifier.new("%s\u02E4"), "ipa_modifier_pharyngealized"],
-		[IPA_Modifier.new("%s\u02C0"), "ipa_modifier_glottalized"],
-		[IPA_Modifier.new("%s\u032F"), "ipa_modifier_diphthong"],
-		[IPA_Modifier.new("%s\u02D0"), "ipa_modifier_long_vowel"],
-		[IPA_Modifier.new("%s\u02D1"), "ipa_modifier_half_long_vowel"],
-		[IPA_Modifier.new("%s\u0306"), "ipa_modifier_extra_short_vowel"],
+		[IPA.MODIFIER_AFFRICATIVE, "ipa_modifier_affricative"],
+		[IPA.MODIFIER_ASPIRATED, "ipa_modifier_aspirated"],
+		[IPA.MODIFIER_RHOTIC_HOOK, "ipa_modifier_rhotic_hook"],
+		[IPA.MODIFIER_RHOTIC_SUPERSCRIPT, "ipa_modifier_rhotic_superscript"],
+		[IPA.MODIFIER_EJECTIVE, "ipa_modifier_ejective"],
+		[IPA.MODIFIER_LABIALIZED, "ipa_modifier_labialized"],
+		[IPA.MODIFIER_PALATALIZED, "ipa_modifier_palatalized"],
+		[IPA.MODIFIER_VELARIZED, "ipa_modifier_velarized"],
+		[IPA.MODIFIER_PHARYNGEALIZED, "ipa_modifier_pharyngealized"],
+		[IPA.MODIFIER_GLOTTALIZED, "ipa_modifier_glottalized"],
+		[IPA.MODIFIER_DIPHTHONG, "ipa_modifier_diphthong"],
+		[IPA.MODIFIER_LONG_VOWEL, "ipa_modifier_long_vowel"],
+		[IPA.MODIFIER_HALF_LONG_VOWEL, "ipa_modifier_half_long_vowel"],
+		[IPA.MODIFIER_EXTRA_SHORT_VOWEL, "ipa_modifier_extra_short_vowel"],
 	]
 	
 	_keys.columns = modifiers.size()
