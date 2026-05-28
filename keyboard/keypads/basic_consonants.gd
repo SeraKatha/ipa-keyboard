@@ -120,49 +120,49 @@ func _ready() -> void:
 	
 	var fricatives = [
 		[
-			[sound("ɸ"),"ipa_fricative_bilabial_unvoiced"],
-			[sound("β"),"ipa_fricative_bilabial_voiced"],
+			IPA.FRICATIVE_BILABIAL_UNVOICED,
+			IPA.FRICATIVE_BILABIAL_VOICED,
 		],
 		[
-			[sound("f"),"ipa_fricative_labiodental_unvoiced"],
-			[sound("v"),"ipa_fricative_labiodental_voiced"],
+			IPA.FRICATIVE_LABIODENTAL_UNVOICED,
+			IPA.FRICATIVE_LABIODENTAL_VOICED,
 		],
 		[
-			[sound("θ"),"ipa_fricative_dental_unvoiced"],
-			[sound("ð"),"ipa_fricative_dental_voiced"],
+			IPA.FRICATIVE_DENTAL_UNVOICED,
+			IPA.FRICATIVE_DENTAL_VOICED,
 		],
 		[
-			[sound("s"),"ipa_fricative_alveolar_unvoiced"],
-			[sound("z"),"ipa_fricative_alveolar_voiced"],
+			IPA.FRICATIVE_ALVEOLAR_UNVOICED,
+			IPA.FRICATIVE_ALVEOLAR_VOICED,
 		],
 		[
-			[sound("ʃ"),"ipa_fricative_postaveolar_unvoiced"],
-			[sound("ʒ"),"ipa_fricative_postaveolar_voiced"],
+			IPA.FRICATIVE_POSTAVEOLAR_UNVOICED,
+			IPA.FRICATIVE_POSTAVEOLAR_VOICED,
 		],
 		[
-			[sound("ʂ"),"ipa_fricative_retroflex_unvoiced"],
-			[sound("ʐ"),"ipa_fricative_retroflex_voiced"],
+			IPA.FRICATIVE_RETROFLEX_UNVOICED,
+			IPA.FRICATIVE_RETROFLEX_VOICED,
 		],
 		[
-			[sound("ç"),"ipa_fricative_palatal_unvoiced"],
-			[sound("ʝ"),"ipa_fricative_palatal_voiced"],
+			IPA.FRICATIVE_PALATAL_UNVOICED,
+			IPA.FRICATIVE_PALATAL_VOICED,
 		],
 		[
-			[sound("x"),"ipa_fricative_velar_unvoiced"],
-			[sound("ɣ"),"ipa_fricative_velar_voiced"],
+			IPA.FRICATIVE_VELAR_UNVOICED,
+			IPA.FRICATIVE_VELAR_VOICED,
 		],
 		[
-			[sound("χ"),"ipa_fricative_uvular_unvoiced"],
-			[sound("ʁ"),"ipa_fricative_uvular_voiced"],
+			IPA.FRICATIVE_UVULAR_UNVOICED,
+			IPA.FRICATIVE_UVULAR_VOICED,
 		],
 		[
-			[sound("ħ"),"ipa_fricative_pharyngeal_unvoiced"],
-			[sound("ʕ"),"ipa_fricative_pharyngeal_voiced"],
+			IPA.FRICATIVE_PHARYNGEAL_UNVOICED,
+			IPA.FRICATIVE_PHARYNGEAL_VOICED,
 		],
 		[
-			[sound("h"),"ipa_fricative_glotal_unvoiced"],
-			[sound("ɦ"),"ipa_fricative_glotal_voiced"],
-		],
+			IPA.FRICATIVE_GLOTAL_UNVOICED,
+			IPA.FRICATIVE_GLOTAL_VOICED,
+		]
 	]
 	
 	var lateral_fricatives = [
@@ -170,8 +170,8 @@ func _ready() -> void:
 		[null, null],
 		[null, null],
 		[
-			[sound("ɬ"),"ipa_fricative_lateral_alveolar_unvoiced"],
-			[sound("ɮ"),"ipa_fricative_lateral_alveolar_voiced"],
+			IPA.FRICATIVE_LATERAL_ALVEOLAR_UNVOICED,
+			IPA.FRICATIVE_LATERAL_ALVEOLAR_VOICED,
 		],
 		[null, null],
 		[null, null],
