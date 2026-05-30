@@ -1,16 +1,15 @@
 extends BasicKey
 
+@export var modifier : IPA_Modifier
+
 @onready var _keyboard_hint: Label = %KeyboardHint
 var _action : String;
 var modifier_select = false;
-var modifier : IPA_Modifier
 
 func set_modifier(mod : IPA_Modifier) -> void:
 	modifier = mod
 	text = mod.get_ipa_symbol() % "◌"
-
-
-func set_input_action(input_action_name : String) -> void:
+	var input_action_name = "ipa_%s" % modifier.get_sound_name()
 	_keyboard_hint.text = _generate_keyboard_hint(input_action_name)
 	_action = input_action_name
 	

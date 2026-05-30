@@ -1,8 +1,6 @@
-class_name ModifierPad extends Control
+class_name ModifierPad extends GridContainer
 
 signal typed(sound : IPA_Sound)
-
-@onready var _keys: GridContainer = %Keys
 
 const MODIFIER_KEY = preload("uid://dx7j1g7c5cv1i")
 
@@ -41,24 +39,22 @@ func _ready() -> void:
 		IPA.MODIFIER_EXTRA_SHORT_VOWEL,
 	]
 	
-	_keys.columns = modifiers.size()
+	columns = modifiers.size()
 	
 	for modifier in modifiers:
 		var button = MODIFIER_KEY.instantiate()
-		var action = "ipa_%s" % modifier.get_sound_name()
-		_keys.add_child(button)
+		add_child(button)
 		button.set_modifier(modifier)
-		button.set_input_action(action)
 
 
 func apply(sound : IPA_Sound) -> void:
 	if not _modifier_select:
-		for key in _keys.get_children():
+		for key in get_children():
 			sound = _apply_if(key, sound)
 		_emit_typed(sound)
 
 
 func _process(_delta: float) -> void:
 	_modifier_select = Input.is_action_pressed("toggle_modifer_select") 
-	for key in _keys.get_children():
+	for key in get_children():
 		key.modifier_select = _modifier_select

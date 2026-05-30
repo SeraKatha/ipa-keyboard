@@ -7,13 +7,13 @@ func _ready() -> void:
 			IPA.PLOSIVE_BILABIAL_UNVOICED,
 			IPA.PLOSIVE_BILABIAL_VOICED,
 		],
-		[null, null],
-		[null, null],
+		null,
+		null,
 		[
 			IPA.PLOSIVE_ALVEOLAR_UNVOICED,
 			IPA.PLOSIVE_ALVEOLAR_VOICED,
 		],
-		[null, null],
+		null,
 		[
 			IPA.PLOSIVE_RETROFLEX_UNVOICED,
 			IPA.PLOSIVE_RETROFLEX_VOICED,
@@ -30,7 +30,7 @@ func _ready() -> void:
 			IPA.PLOSIVE_UVULAR_UNVOICED,
 			IPA.PLOSIVE_UVULAR_VOICED,
 		],
-		[null, null],
+		null,
 		[
 			IPA.PLOSIVE_GLOTTAL,
 			null,
@@ -46,8 +46,8 @@ func _ready() -> void:
 			null,
 			IPA.NASAL_LABIODENTAL,
 		],
-		[null, null],
-		[null, null],
+		null,
+		null,
 		[
 			null,
 			IPA.NASAL_ALVEOLAR
@@ -68,8 +68,8 @@ func _ready() -> void:
 			null,
 			IPA.NASAL_UVULAR
 		],
-		[null, null],
-		[null, null],
+		null,
+		null,
 	]
 	
 	var trills = [
@@ -77,45 +77,45 @@ func _ready() -> void:
 			null,
 			IPA.TRILL_BILABIAL,
 		],
-		[null, null],
-		[null, null],
+		null,
+		null,
 		[
 			null,
 			IPA.TRILL_AVEOLAR,
 		],
-		[null, null],
-		[null, null],
-		[null, null],
-		[null, null],
+		null,
+		null,
+		null,
+		null,
 		[
 			null,
 			IPA.TRILL_UVULAR
 		],
-		[null, null],
-		[null, null],
+		null,
+		null,
 	]
 	
 	var taps = [
-		[null, null],
+		null,
 		[
 			null,
 			IPA.TAP_LABIODENTAL,
 		],
-		[null, null],
+		null,
 		[
 			null,
 			IPA.TAP_ALVEOLAR,
 		],
-		[null, null],
+		null,
 		[
 			null,
 			IPA.TAP_RETROFLEX
 		],
-		[null, null],
-		[null, null],
-		[null, null],
-		[null, null],
-		[null, null],
+		null,
+		null,
+		null,
+		null,
+		null,
 	]
 	
 	var fricatives = [
@@ -166,20 +166,20 @@ func _ready() -> void:
 	]
 	
 	var lateral_fricatives = [
-		[null, null],
-		[null, null],
-		[null, null],
+		null,
+		null,
+		null,
 		[
 			IPA.FRICATIVE_LATERAL_ALVEOLAR_UNVOICED,
 			IPA.FRICATIVE_LATERAL_ALVEOLAR_VOICED,
 		],
-		[null, null],
-		[null, null],
-		[null, null],
-		[null, null],
-		[null, null],
-		[null, null],
-		[null, null],
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
+		null,
 	]
 	
 	var approximants = [
@@ -191,12 +191,12 @@ func _ready() -> void:
 			null,
 			IPA.APPROXIMANT_LABIODENTAL,
 		],
-		[null, null],
+		null,
 		[
 			null,
 			IPA.APPROXIMANT_ALVEOLAR,
 		],
-		[null, null],
+		null,
 		[
 			null,
 			IPA.APPROXIMANT_RETROFLEX,
@@ -209,20 +209,20 @@ func _ready() -> void:
 			null,
 			IPA.APPROXIMANT_VELAR,
 		],
-		[null, null],
-		[null, null],
-		[null, null],
+		null,
+		null,
+		null,
 	]
 	
 	var lateral_approximants = [
-		[null, null],
-		[null, null],
-		[null, null],
+		null,
+		null,
+		null,
 		[
 			null,
 			IPA.APPROXIMANT_LATERAL_ALVEOLAR,
 		],
-		[null, null],
+		null,
 		[
 			null,
 			IPA.APPROXIMANT_LATERAL_RETROFLEX,
@@ -235,9 +235,9 @@ func _ready() -> void:
 			null,
 			IPA.APPROXIMANT_LATERAL_VELAR,
 		],
-		[null, null],
-		[null, null],
-		[null, null],
+		null,
+		null,
+		null,
 	]
 	
 	var event = InputEventKey.new()

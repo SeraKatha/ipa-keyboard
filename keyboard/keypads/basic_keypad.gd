@@ -11,19 +11,23 @@ func fill(grid):
 
 	for row : Array in grid:
 		var first = true;
-		for pair : Array in row:
+		for pair in row:
 			if first:
 				first = false
 			else:
 				self.add_child(COLUMN_SEPARATOR.instantiate())
-			if pair[0]:
-				_add_sound_button(pair[0])
-			else:
+			if pair == null:
 				_add_place_holder()
-			if pair[1]:
-				_add_sound_button(pair[1])
-			else:
 				_add_place_holder()
+			else:
+				if pair[0]:
+					_add_sound_button(pair[0])
+				else:
+					_add_place_holder()
+				if pair[1]:
+					_add_sound_button(pair[1])
+				else:
+					_add_place_holder()
 
 
 func _add_sound_button(sound_action):

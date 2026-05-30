@@ -7,41 +7,41 @@ func _ready() -> void:
 				IPA.VOWEL_CLOSE_FRONT_UNROUNDED,
 				IPA.VOWEL_CLOSE_FRONT_ROUNDED,
 			],
-			[null, null],
+			null,
 			[
 				IPA.VOWEL_CLOSE_CENTRAL_UNROUNDED,
 				IPA.VOWEL_CLOSE_CENTRAL_ROUNDED,
 			],
-			[null, null],
+			null,
 			[
 				IPA.VOWEL_CLOSE_BACK_UNROUNDED,
 				IPA.VOWEL_CLOSE_BACK_ROUNDED,
 			],
 		], 
 		[
-			[null, null],
+			null,
 			[
 				IPA.VOWEL_NEARCLOSE_NEARFRONT_UNROUNDED,
 				IPA.VOWEL_NEARCLOSE_NEARFRONT_ROUNDED,
 			],
-			[null, null],
+			null,
 			[
 				IPA.VOWEL_NEARCLOSE_NEARBACK,
 				null
 			],
-			[null, null],
+			null,
 		], 
 		[
 			[
 				IPA.VOWEL_CLOSEMID_FRONT_UNROUNDED,
 				IPA.VOWEL_CLOSEMID_FRONT_ROUNDED,
 			],
-			[null, null],
+			null,
 			[
 				IPA.VOWEL_CLOSEMID_CENTRAL_UNROUNDED,
 				IPA.VOWEL_CLOSEMID_CENTRAL_ROUNDED,
 			],
-			[null, null],
+			null,
 			[
 				IPA.VOWEL_CLOSEMID_BACK_UNROUNDED,
 				IPA.VOWEL_CLOSEMID_BACK_ROUNDED,
@@ -52,12 +52,12 @@ func _ready() -> void:
 				IPA.VOWEL_MID_FRONT_UNROUNDED,
 				IPA.VOWEL_MID_FRONT_ROUNDED,
 			],
-			[null, null],
+			null,
 			[
 				IPA.VOWEL_MID_CENTRAL,
 				null,
 			],
-			[null, null],
+			null,
 			[
 				IPA.VOWEL_MID_BACK_UNROUNDED,
 				IPA.VOWEL_MID_BACK_ROUNDED,
@@ -68,12 +68,12 @@ func _ready() -> void:
 				IPA.VOWEL_OPENMID_FRONT_UNROUNDED,
 				IPA.VOWEL_OPENMID_FRONT_ROUNDED,
 			],
-			[null, null],
+			null,
 			[
 				IPA.VOWEL_OPENMID_CENTRAL_UNROUNDED,
 				IPA.VOWEL_OPENMID_CENTRAL_ROUNDED
 			],
-			[null, null],
+			null,
 			[
 				IPA.VOWEL_OPENMID_BACK_UNROUNDED,
 				IPA.VOWEL_OPENMID_BACK_ROUNDED,
@@ -84,25 +84,25 @@ func _ready() -> void:
 				IPA.VOWEL_NEAROPEN_FRONT_UNROUNDED,
 				null
 			],
-			[null, null],
+			null,
 			[
 				IPA.VOWEL_NEAROPEN_CENTRAL,
 				null
 			],
-			[null, null],
-			[null, null],
+			null,
+			null,
 		],
 		[
 			[
 				IPA.VOWEL_OPEN_FRONT_UNROUNDED,
 				IPA.VOWEL_OPEN_FRONT_ROUNDED,
 			],
-			[null, null],
+			null,
 			[
 				IPA.VOWEL_OPEN_CENTRAL,
 				null
 			],
-			[null, null],
+			null,
 			[
 				IPA.VOWEL_OPEN_BACK_UNROUNDED,
 				IPA.VOWEL_OPEN_BACK_ROUNDED
