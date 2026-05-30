@@ -20,10 +20,10 @@ func _init_config():
 	if not FileAccess.file_exists("user://config.cfg"):
 		var config = ConfigFile.new()
 		config.set_value("ui", "scale", 1.0)
-		for action in InputMap.get_actions():
-			if action.begins_with("ipa_"):
-				var action_event : InputEvent = InputMap.action_get_events(action)[0]
-				config.set_value("key_bindings", action, action_event.as_text().to_lower())
+		#for action in InputMap.get_actions():
+			#if action.begins_with("ipa_"):
+				#var action_event : InputEvent = InputMap.action_get_events(action)[0]
+				#config.set_value("key_bindings", action, action_event.as_text().to_lower())
 		config.save("user://config.cfg")
 
 
